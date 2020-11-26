@@ -65,6 +65,6 @@ table.game-board {
 }
 
 
-.game-block .type-1{
+.game-block.type-1{
   background-image: url(../img/sausages/1.png);
 }

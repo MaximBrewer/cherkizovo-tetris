@@ -34,28 +34,28 @@
   border: 1px solid #ddd;
 }
 .piece-i {
-  background-color: #ec858b;
+  background-color: #E3CDAA;
 }
 .piece-j {
-  background-color: #f1b598;
+  background-color: #E3CDAA;
 }
 .piece-l {
-  background-color: #f8efae;
+  background-color: #E3CDAA;
 }
 .piece-o {
-  background-color: #b5a677;
+  background-color: #E3CDAA;
 }
 .piece-s {
-  background-color: #816e56;
+  background-color: #E3CDAA;
 }
 .piece-t {
-  background-color: #b77c72;
+  background-color: #E3CDAA;
 }
 .piece-z {
-  background-color: #e3be58;
+  background-color: #E3CDAA;
 }
 .piece-preview {
-  background-color: #eee;
+  background-color: transparent;
 }
 
 table.game-board {

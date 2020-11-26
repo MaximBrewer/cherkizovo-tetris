@@ -6968,6 +6968,12 @@ function gameBoard() {
   };
 }
 
+function randomInteger(min, max) {
+  // получить случайное число от (min-0.5) до (max+0.5)
+  let rand = min - 0.5 + Math.random() * (max - min + 1);
+  return Math.round(rand);
+}
+
 var keyboardMap = {
   down: AppActions.moveDown,
   left: AppActions.moveLeft,
@@ -7046,7 +7052,7 @@ var Gameboard = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var rows = this.state.gameBoard.map(function (row, i) {
         var blocksInRow = row.map(function (block, j) {
-          var classString = "game-block ".concat(block || 'block-empty');
+          var classString = "game-block ".concat(block || 'block-empty') + " sausage-" + randomInteger(1, 5);
           return /*#__PURE__*/React.createElement("td", {
             key: j,
             className: classString

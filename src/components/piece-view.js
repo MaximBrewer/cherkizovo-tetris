@@ -10,6 +10,7 @@ const PieceView = (props) => {
     const blocksInRow = row.map((block, j) => {
       let classString = 'game-block ';
 
+      console.log(block)
       if (block) {
         classString += props.piece.className;
       } else {

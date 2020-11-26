@@ -76,7 +76,7 @@ export default class Gameboard extends React.Component {
   render() {
     const rows = this.state.gameBoard.map((row, i) => {
       const blocksInRow = row.map((block, j) => {
-        const classString = `game-block ${block || 'block-empty'}`;
+        const classString = `game-block type-${block} ${block || 'block-empty'}`;
         return <td key={j} className={classString} />;
       });
 

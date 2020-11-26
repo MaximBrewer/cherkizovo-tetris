@@ -1606,7 +1606,7 @@ var Dispatcher = (function () {
    */
 
   Dispatcher.prototype.unregister = function unregister(id) {
-    !this._callbacks[id] ?  invariant_1(false, 'Dispatcher.unregister(...): `%s` does not map to a registered callback.', id)  : undefined;
+    var t = !this._callbacks[id] ?  invariant_1(false, 'Dispatcher.unregister(...): `%s` does not map to a registered callback.', id)  : undefined;
     delete this._callbacks[id];
   };
 

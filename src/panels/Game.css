@@ -37,25 +37,25 @@
   background-size: contain;
 }
 .piece-i {
-  background-color: #E3CDAA;
+  background-color: #e3cdaa;
 }
 .piece-j {
-  background-color: #E3CDAA;
+  background-color: #e3cdaa;
 }
 .piece-l {
-  background-color: #E3CDAA;
+  background-color: #e3cdaa;
 }
 .piece-o {
-  background-color: #E3CDAA;
+  background-color: #e3cdaa;
 }
 .piece-s {
-  background-color: #E3CDAA;
+  background-color: #e3cdaa;
 }
 .piece-t {
-  background-color: #E3CDAA;
+  background-color: #e3cdaa;
 }
 .piece-z {
-  background-color: #E3CDAA;
+  background-color: #e3cdaa;
 }
 .piece-preview {
   background-color: transparent;
@@ -67,22 +67,24 @@ table.game-board {
   width: 100%;
 }
 
-
-.game-block.type-1{
+.game-block.type-1 {
   background-image: url(../img/sausages/1.png);
 }
-.game-block.type-2{
+.game-block.type-2 {
   background-image: url(../img/sausages/2.png);
 }
-.game-block.type-3{
+.game-block.type-3 {
   background-image: url(../img/sausages/3.png);
 }
-.game-block.type-4{
+.game-block.type-4 {
   background-image: url(../img/sausages/4.png);
 }
-.game-block.type-5{
+.game-block.type-5 {
   background-image: url(../img/sausages/5.png);
 }
-.game-block.type-6{
+.game-block.type-6 {
   background-image: url(../img/sausages/6.png);
+}
+.game-block.piece-preview {
+  background: none !important;
 }

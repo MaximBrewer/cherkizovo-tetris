@@ -67,8 +67,8 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 										</Div>
 										<Div style={{ width: "32%", justifyContent: "center", alignItems: "center", padding: "0 1rem 0 2rem" }}>
 											<Div className={`scores`}>
-												<p>Points: {points}</p>
-												<p>Lines Cleared: {linesCleared}</p>
+												<p>Очков: {points}</p>
+												<p>Линий: {linesCleared}</p>
 											</Div>
 											<Div style={{
 												background: "#AA2223",

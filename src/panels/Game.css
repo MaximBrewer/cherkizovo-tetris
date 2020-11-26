@@ -63,3 +63,8 @@ table.game-board {
   border-spacing: 0;
   width: 100%;
 }
+
+
+.game-block .type-1{
+  background-image: url(../img/sausages/1.png);
+}

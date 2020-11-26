@@ -1,4 +1,4 @@
-.Game *{
+.Game * {
   box-sizing: border-box;
 }
 .Game {
@@ -29,8 +29,8 @@
 .game-block {
   margin: 0;
   padding: 0;
-  width: 1.5em;
-  height: 1.5em;
+  width: 28.8px;
+  height: 28.8px;
   border: 1px solid #ddd;
 }
 .piece-i {
@@ -56,4 +56,10 @@
 }
 .piece-preview {
   background-color: #eee;
+}
+
+table.game-board {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
 }

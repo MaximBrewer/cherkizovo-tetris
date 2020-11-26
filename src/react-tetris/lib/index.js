@@ -106,7 +106,7 @@ function _createSuper(Derived) {
 }
 
 var global$1 = (typeof global !== "undefined" ? global :
-            typeof self !== "undefined" ? self :
+            typeof window.self !== "undefined" ? window.self :
             typeof window !== "undefined" ? window : {});
 
 // from https://github.com/kumavis/browser-process-hrtime/blob/master/index.js
@@ -119,7 +119,7 @@ var performanceNow =
   performance.webkitNow  ||
   function(){ return (new Date()).getTime() };
 
-var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+var commonjsGlobal = typeof window.globalThis !== 'undefined' ? window.globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof window.self !== 'undefined' ? window.self : {};
 
 function unwrapExports (x) {
 	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
@@ -2038,7 +2038,7 @@ var freeGlobal = typeof commonjsGlobal == 'object' && commonjsGlobal && commonjs
 var _freeGlobal = freeGlobal;
 
 /** Detect free variable `self`. */
-var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+var freeSelf = typeof window.self == 'object' && window.self && window.self.Object === Object && window.self;
 
 /** Used as a reference to the global object. */
 var root = _freeGlobal || freeSelf || Function('return this')();

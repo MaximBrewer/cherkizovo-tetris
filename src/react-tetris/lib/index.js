@@ -1617,14 +1617,14 @@ var Dispatcher = (function () {
    */
 
   Dispatcher.prototype.waitFor = function waitFor(ids) {
-    !this._isDispatching ?  invariant_1(false, 'Dispatcher.waitFor(...): Must be invoked while dispatching.')  : undefined;
+    var t = !this._isDispatching ?  invariant_1(false, 'Dispatcher.waitFor(...): Must be invoked while dispatching.')  : undefined;
     for (var ii = 0; ii < ids.length; ii++) {
       var id = ids[ii];
       if (this._isPending[id]) {
-        !this._isHandled[id] ?  invariant_1(false, 'Dispatcher.waitFor(...): Circular dependency detected while ' + 'waiting for `%s`.', id)  : undefined;
+        var t = !this._isHandled[id] ?  invariant_1(false, 'Dispatcher.waitFor(...): Circular dependency detected while ' + 'waiting for `%s`.', id)  : undefined;
         continue;
       }
-      !this._callbacks[id] ?  invariant_1(false, 'Dispatcher.waitFor(...): `%s` does not map to a registered callback.', id)  : undefined;
+      var t = !this._callbacks[id] ?  invariant_1(false, 'Dispatcher.waitFor(...): `%s` does not map to a registered callback.', id)  : undefined;
       this._invokeCallback(id);
     }
   };
@@ -1634,7 +1634,7 @@ var Dispatcher = (function () {
    */
 
   Dispatcher.prototype.dispatch = function dispatch(payload) {
-    !!this._isDispatching ?  invariant_1(false, 'Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch.')  : undefined;
+    var t = !!this._isDispatching ?  invariant_1(false, 'Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch.')  : undefined;
     this._startDispatching(payload);
     try {
       for (var id in this._callbacks) {
@@ -4214,6 +4214,7 @@ function baseClone(value, bitmask, customizer, key, object, stack) {
     });
   }
 
+  var keysIn = typeof keysIn != undefined ? keysIn : false; 
   var keysFunc = isFull
     ? (isFlat ? _getAllKeysIn : _getAllKeys)
     : (isFlat ? keysIn : keys_1);

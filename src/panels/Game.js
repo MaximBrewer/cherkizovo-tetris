@@ -66,6 +66,10 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 											</div>
 										</Div>
 										<Div style={{ width: "32%", justifyContent: "center", alignItems: "center", padding: "0 1rem 0 2rem" }}>
+											<Div className={`scores`}>
+												<p>Points: {points}</p>
+												<p>Lines Cleared: {linesCleared}</p>
+											</Div>
 											<Div style={{
 												background: "#AA2223",
 												border: "2px solid #FFFFFF",
@@ -74,10 +78,6 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 												borderRadius: "1.5rem",
 												padding: "0.5rem 1.5rem"
 											}}>
-												<Div className={`scores`}>
-													<p>Points: {points}</p>
-													<p>Lines Cleared: {linesCleared}</p>
-												</Div>
 												<Div className={`control`} style={{ display: "flex", justifyContent: "space-between" }}>
 													<a href="#" onClick={moveLeft} style={{ display: "block", width: "25%" }}>
 														<Left style={{ display: "block", width: "100%" }} />

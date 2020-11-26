@@ -29,6 +29,7 @@ const _setPiece = pieceSetter(_gameBoard);
 const BoardStore = _.extend(
   {
     getBoard() {
+      console.log(_gameBoard)
       return _gameBoard;
     },
 

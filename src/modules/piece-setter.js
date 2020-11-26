@@ -11,7 +11,7 @@ export default function createPieceSetter(board) {
           const boardY = position.y + y;
           if (board[boardY]) {
             /* eslint-disable no-param-reassign */
-            board[boardY][boardX] = className;
+            board[boardY][boardX] = className + ' type-' + block;
           }
         }
       }

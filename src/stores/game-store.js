@@ -17,6 +17,7 @@ const GameStore = _.extend(
       if (_currentState === states.LOST) {
         return BoardStore.getBoard();
       }
+      consolw.log(BoardStore.getBoard())
       const gameBoard = _.cloneDeep(BoardStore.getBoard());
       const pieceData = PieceStore.getPieceData();
       const setter = pieceSetter(gameBoard);

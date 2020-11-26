@@ -34,7 +34,6 @@ const BoardStore = _.extend(
 
 
     setPiece(piece, rotation, position) {
-    console.log(piece);
       _setPiece(piece.blocks[rotation], position, piece.className);
       BoardStore.clearFullLines();
       BoardStore.emitChange();

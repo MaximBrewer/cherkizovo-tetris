@@ -16,16 +16,6 @@ import './Game.css';
 import bg from '../img/game-bg.jpg';
 import canavsBg from '../img/canvas-bg.png';
 
-const COLS = 10, ROWS = 15, shapes = [
-	[1, 1, 1, 1],
-	[1, 1, 1, 0, 1],
-	[1, 1, 1, 0, 0, 0, 1],
-	[1, 1, 0, 0, 1, 1],
-	[1, 1, 0, 0, 0, 1, 1],
-	[0, 1, 1, 0, 1, 1],
-	[0, 1, 0, 0, 1, 1, 1]
-];
-
 const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 	const moveLeft = (e) => {
 		e.preventDefault();
@@ -53,7 +43,7 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 							<h4>Миссия: <br /> накрой праздничный стол с Черкизово!</h4>
 							<p>Набери больше всех баллов и&nbsp;получи крутые призы!</p>
 						</Div>
-						<Tetris>
+						<Tetris GAME_HEIGHT={10}>
 							{({ HeldPiece, Gameboard, PieceQueue, points, linesCleared }) => {
 								return (
 									<Div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>

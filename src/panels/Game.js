@@ -74,6 +74,10 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 												borderRadius: "1.5rem",
 												padding: "0.5rem 1.5rem"
 											}}>
+												<Div className={`scores`}>
+													<p>Points: {points}</p>
+													<p>Lines Cleared: {linesCleared}</p>
+												</Div>
 												<Div className={`control`} style={{ display: "flex", justifyContent: "space-between" }}>
 													<a href="#" onClick={moveLeft} style={{ display: "block", width: "25%" }}>
 														<Left style={{ display: "block", width: "100%" }} />

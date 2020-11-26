@@ -71,3 +71,18 @@ table.game-board {
 .game-block.type-1{
   background-image: url(../img/sausages/1.png);
 }
+.game-block.type-2{
+  background-image: url(../img/sausages/2.png);
+}
+.game-block.type-3{
+  background-image: url(../img/sausages/3.png);
+}
+.game-block.type-4{
+  background-image: url(../img/sausages/4.png);
+}
+.game-block.type-5{
+  background-image: url(../img/sausages/5.png);
+}
+.game-block.type-6{
+  background-image: url(../img/sausages/6.png);
+}

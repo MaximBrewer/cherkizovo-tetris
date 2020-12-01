@@ -10,7 +10,7 @@ import FixedLayout from '@vkontakte/vkui/dist/components/FixedLayout/FixedLayout
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import { Left, Right, Rotate } from '../Icons'
 import Tetris from '../components/tetris';
-
+import AppActions from '../actions/app-actions';
 
 import './Game.css';
 import bg from '../img/game-bg.jpg';
@@ -19,13 +19,16 @@ import canavsBg from '../img/canvas-bg.png';
 const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 	const moveLeft = (e) => {
 		e.preventDefault();
+		AppActions.moveLeft
 	}
 	const moveRight = (e) => {
 		e.preventDefault();
+		AppActions.moveLeft
 
 	}
 	const rotate = (e) => {
 		e.preventDefault();
+		AppActions.flipClockwise
 	}
 
 	const canvasOuter = useRef(null);
@@ -55,11 +58,7 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 												backgroundImage: 'url(' + canavsBg + ')'
 											}}>
 												<div ref={canvasOuter}>
-													{/* <HeldPiece />
-														<div>
-															<p>Points: {points}</p>
-															<p>Lines Cleared: {linesCleared}</p>
-														</div> */}
+													{/* <HeldPiece /> */}
 													<Gameboard />
 													{/* <PieceQueue /> */}
 												</div>

@@ -16,3 +16,16 @@
 .Intro .Div--ios {
   padding: 0;
 }
+
+.Intro h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+.Intro h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+}
+.Intro p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+}

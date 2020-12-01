@@ -37,7 +37,7 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 		go(route)
 	});
 
-	const [tetris, setTetris] = setState(null)
+	const [tetris, setTetris] = useState(null)
 
 	useEffect(() => {
 		setTetris(getTetris())

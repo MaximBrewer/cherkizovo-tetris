@@ -1,35 +1,36 @@
 
-const randomInteger = () =>  {
+const randomInteger = () => {
   let min = 1, max = 16
   // случайное число от min до (max+1)
   let rand = min + Math.random() * (max + 1 - min);
   return Math.floor(rand);
 }
 
+let I1 = randomInteger() + '', I2 = randomInteger(), I3 = randomInteger(), I4 = randomInteger()
 const I = {
   blocks: [
     [
-      [0, randomInteger(), 0, 0],
-      [0, randomInteger(), 0, 0],
-      [0, randomInteger(), 0, 0],
-      [0, randomInteger(), 0, 0]
+      [0, I1 + ' b', 0, 0],
+      [0, I2 + ' tb', 0, 0],
+      [0, I3 + ' tb', 0, 0],
+      [0, I4 + ' t', 0, 0]
     ],
     [
       [0, 0, 0, 0],
-      [randomInteger(), randomInteger(), randomInteger(), randomInteger()],
+      [I4, I3, I2, I1],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, 0, randomInteger(), 0],
-      [0, 0, randomInteger(), 0],
-      [0, 0, randomInteger(), 0],
-      [0, 0, randomInteger(), 0]
+      [0, 0, I4, 0],
+      [0, 0, I3, 0],
+      [0, 0, I2, 0],
+      [0, 0, I1, 0]
     ],
     [
       [0, 0, 0, 0],
       [0, 0, 0, 0],
-      [randomInteger(), randomInteger(), randomInteger(), randomInteger()],
+      [I1, I2, I3, I4],
       [0, 0, 0, 0]
     ]
   ],

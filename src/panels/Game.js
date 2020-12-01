@@ -7,6 +7,8 @@ import Tetris from '../components/tetris';
 import AppActions from '../actions/app-actions';
 import PieceStore from '../stores/piece-store';
 import AppConstants from '../constants/app-constants';
+import GameStore from '../stores/game-store'
+import BoardStore from '../stores/board-store'
 import './Game.css';
 import bg from '../img/game-bg.jpg';
 import canavsBg from '../img/canvas-bg.png';
@@ -37,6 +39,8 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 
 	useEffect(() => {
 		console.log(activePanel)
+		BoardStore.clearTable();
+		GameStore.forceStart()
 	}, [activePanel])
 
 	return (

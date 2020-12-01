@@ -42,6 +42,11 @@ const GameStore = _.extend(
       return _currentState;
     },
 
+    forceStart() {
+      _currentState = null
+      this.start()
+    },
+
     start() {
       if (_currentState !== states.LOST) {
         _interval = global.setInterval(() => {

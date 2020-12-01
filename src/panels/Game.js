@@ -32,12 +32,12 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 
 	const [show, setShow] = useState(true);
 
+	const [tetris, setTetris] = useState(null)
+
 	PieceStore.on(events.PLAYER_LOST, () => {
-		setTetris(getTetris())
+		setTetris(Icon28NotificationDisableOutline)
 		go(route)
 	});
-
-	const [tetris, setTetris] = useState(null)
 
 	useEffect(() => {
 		setTetris(getTetris())

@@ -3,7 +3,6 @@ import key from 'keymaster';
 import AppActions from '../actions/app-actions';
 import GameStore from '../stores/game-store';
 import AppConstants from '../constants/app-constants';
-import DetectShift from '../modules/detect-shift';
 
 const { states } = AppConstants;
 

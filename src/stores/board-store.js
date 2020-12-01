@@ -67,7 +67,6 @@ const BoardStore = _.extend(
     },
 
     clearTable() {
-      let linesCleared = 0;
       for (let y = 0; y < _gameBoard.length; y++) {
         _gameBoard.splice(y, 1);
         _gameBoard.unshift(buildGameRow());

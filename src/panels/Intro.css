@@ -1,5 +1,6 @@
 .Intro *{
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 .Intro {
   display: block;

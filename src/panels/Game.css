@@ -1,5 +1,6 @@
 .Game * {
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 .Game {
   display: block;

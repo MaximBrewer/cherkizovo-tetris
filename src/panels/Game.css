@@ -30,6 +30,7 @@
 .game-block {
   margin: 0;
   padding: 0;
+  position: relative;
   width: 28.8px;
   height: 28.8px;
   border: 1px solid #ddd;

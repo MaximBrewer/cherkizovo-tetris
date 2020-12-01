@@ -84,6 +84,7 @@ const GameStore = _.extend(
         case actions.RESUME:
           GameStore.start();
           break;
+        default: break;
       }
 
       return true;

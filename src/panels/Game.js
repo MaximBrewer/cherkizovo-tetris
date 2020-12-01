@@ -1,11 +1,10 @@
-import React, { Fragment, useRef, useState, useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import { Left, Right, Rotate } from '../Icons'
 import Tetris from '../components/tetris';
 import AppActions from '../actions/app-actions';
 import PieceStore from '../stores/piece-store';
-import GameStore from '../stores/game-store';
 import AppConstants from '../constants/app-constants';
 import './Game.css';
 import bg from '../img/game-bg.jpg';

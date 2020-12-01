@@ -123,10 +123,10 @@ table.game-board {
   position: absolute;
   height: 100%;
   width: 100%;
-  top: 0;
-  left: 0;
+  top: -2px;
+  left: -2px;
   content: "";
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 }
 .game-block.t:after {
   border-top-color: #be8949;
@@ -139,4 +139,16 @@ table.game-board {
 }
 .game-block.r:after {
   border-right-color: #be8949;
+}
+.game-block.t.l:after {
+  border-top-left-radius: 2px;
+}
+.game-block.t.r:after {
+  border-top-right-radius: 2px;
+}
+.game-block.b.r:after {
+  border-bottom-right-radius: 2px;
+}
+.game-block.b.l:after {
+  border-bottom-left-radius: 2px;
 }

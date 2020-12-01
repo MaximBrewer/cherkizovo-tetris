@@ -6,7 +6,7 @@ import Tetris from '../components/tetris';
 import AppActions from '../actions/app-actions';
 import PieceStore from '../stores/piece-store';
 import GameStore from '../stores/game-store';
-import GameStore from '../stores/board-store';
+import BoardStore from '../stores/board-store';
 import AppConstants from '../constants/app-constants';
 import './Game.css';
 import bg from '../img/game-bg.jpg';
@@ -32,7 +32,7 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 
 	PieceStore.on(events.PLAYER_LOST, () => {
 		console.log(GameStore.getGameBoard())
-		BoardStore.getBoard();
+		console.log(BoardStore.getBoard());
 		go(route);
 	});
 

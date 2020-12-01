@@ -6,14 +6,12 @@ import Tetris from '../components/tetris';
 import AppActions from '../actions/app-actions';
 import PieceStore from '../stores/piece-store';
 import AppConstants from '../constants/app-constants';
-
-const { events } = AppConstants;
-
 import './Game.css';
 import bg from '../img/game-bg.jpg';
 import canavsBg from '../img/canvas-bg.png';
 
 
+const { events } = AppConstants;
 
 const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 	const moveLeft = (e) => {

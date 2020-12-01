@@ -98,6 +98,7 @@ const L = {
   ],
   className: 'piece-l'
 };
+
 let O1 = randomInteger(), O2 = randomInteger(), O3 = randomInteger(), O4 = randomInteger()
 const O = {
   blocks: [
@@ -160,60 +161,62 @@ const S = {
   className: 'piece-s'
 };
 
+let T1 = randomInteger(), T2 = randomInteger(), T3 = randomInteger(), T4 = randomInteger()
 const T = {
   blocks: [
     [
       [0, 0, 0, 0],
-      [randomInteger(), randomInteger(), randomInteger(), 0],
-      [0, randomInteger(), 0, 0],
+      [T1 + ' t b l', T2 + ' t', T3 + ' t b r', 0],
+      [0, T4 + ' b r l', 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, randomInteger(), 0, 0],
-      [randomInteger(), randomInteger(), 0, 0],
-      [0, randomInteger(), 0, 0],
+      [0, T1 + ' t l r', 0, 0],
+      [T4 + ' t b l', T2 + ' r', 0, 0],
+      [0, T3 + ' b r l', 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, randomInteger(), 0, 0],
-      [randomInteger(), randomInteger(), randomInteger(), 0],
+      [0, T4 + ' t l r', 0, 0],
+      [T3 + ' t b l', T2 + ' b', T1 + ' t b r', 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, randomInteger(), 0, 0],
-      [0, randomInteger(), randomInteger(), 0],
-      [0, randomInteger(), 0, 0],
+      [0, T3 + ' t l r', 0, 0],
+      [0, T2 + ' l', T4 + ' t b r', 0],
+      [0, T1 + ' b r l', 0, 0],
       [0, 0, 0, 0]
     ]
   ],
   className: 'piece-t'
 };
 
+let Z1 = randomInteger(), Z2 = randomInteger(), Z3 = randomInteger(), Z4 = randomInteger()
 const Z = {
   blocks: [
     [
       [0, 0, 0, 0],
-      [randomInteger(), randomInteger(), 0, 0],
-      [0, 4, 5, 0],
+      [Z1 + ' t b l', Z2 + ' t r', 0, 0],
+      [0, Z3 + ' b l', Z4 + ' t b r', 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, randomInteger(), 0, 0],
-      [4, randomInteger(), 0, 0],
-      [5, 0, 0, 0],
+      [0, Z1 + ' t l r', 0, 0],
+      [Z3 + ' t l', Z2 + ' b r', 0, 0],
+      [Z4 + ' b r l', 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [5, 4, 0, 0],
-      [0, randomInteger(), randomInteger(), 0],
+      [Z4 + ' t b l', Z3 + ' t r', 0, 0],
+      [0, Z2 + ' b l', Z1 + ' t b r', 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, 0, 5, 0],
-      [0, randomInteger(), 4, 0],
-      [0, randomInteger(), 0, 0],
+      [0, 0, Z4 + ' t l r', 0],
+      [0, Z2 + ' t l', Z3 + ' b r', 0],
+      [0, Z1 + ' b r l', 0, 0],
       [0, 0, 0, 0]
     ]
   ],

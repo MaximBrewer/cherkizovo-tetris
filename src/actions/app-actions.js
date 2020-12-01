@@ -9,6 +9,7 @@ const AppActions = {
       actionType: actions.MOVE_DOWN,
       piece
     });
+		window.woop();
   },
 
   moveLeft(piece) {
@@ -24,6 +25,7 @@ const AppActions = {
       actionType: actions.MOVE_RIGHT,
       piece
     });
+		window.woop();
   },
 
   hardDrop(piece) {
@@ -31,6 +33,7 @@ const AppActions = {
       actionType: actions.HARD_DROP,
       piece
     });
+		window.woop();
   },
 
   flipClockwise(piece) {
@@ -38,6 +41,7 @@ const AppActions = {
       actionType: actions.FLIP_CLOCKWISE,
       piece
     });
+		window.woop();
   },
 
   flipCounterclockwise(piece) {
@@ -45,6 +49,7 @@ const AppActions = {
       actionType: actions.FLIP_COUNTERCLOCKWISE,
       piece
     });
+		window.woop();
   },
 
   pause() {
@@ -57,12 +62,14 @@ const AppActions = {
     AppDispatcher.handleViewAction({
       actionType: actions.RESUME
     });
+		window.woop();
   },
 
   hold() {
     AppDispatcher.handleViewAction({
       actionType: actions.HOLD
     });
+		window.woop();
   }
 };
 

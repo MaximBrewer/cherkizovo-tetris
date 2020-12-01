@@ -19,7 +19,7 @@ const Intro = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 				<Div className='Intro' style={{ textAlign: "center", backgroundImage: 'url(' + bg + ')', display: "flex", justifyContent: "center", alignItems: "center" }} >
 					{/* {fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200} /> : null}
 					<h2>Привет, {fetchedUser.first_name}</h2> */}
-					<Div style={{ color: "#ffffff" }}>
+					<Div style={{ minHeight: "70%", color: "#ffffff" }}>
 						<h2>Новый год с</h2>
 						<h2><img src={logo} alt="" style={{ width: "12rem" }} /></h2>
 						<h3>Миссия: <br /> накрой праздничный стол с&nbsp;Черкизово!</h3>

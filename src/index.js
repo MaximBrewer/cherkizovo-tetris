@@ -8,7 +8,15 @@ import App from "./App";
 // Init VK  Mini App
 bridge.send("VKWebAppInit");
 
+
+const audioWoop = new Audio(woopMp3);
+
+const woop = () => {
+  audioWoop.play();
+}
+
 ReactDOM.render(<App />, document.getElementById("root"));
 if (false && process.env.NODE_ENV === "development") {
   import("./eruda").then(({ default: eruda }) => {}); //runtime download
 }
+

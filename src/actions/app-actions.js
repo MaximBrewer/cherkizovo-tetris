@@ -16,6 +16,7 @@ const AppActions = {
       actionType: actions.MOVE_LEFT,
       piece
     });
+		window.woop();
   },
 
   moveRight(piece) {
@@ -47,21 +48,21 @@ const AppActions = {
   },
 
   pause() {
-    // AppDispatcher.handleViewAction({
-    //   actionType: actions.PAUSE
-    // });
+    AppDispatcher.handleViewAction({
+      actionType: actions.PAUSE
+    });
   },
 
   resume() {
-    // AppDispatcher.handleViewAction({
-    //   actionType: actions.RESUME
-    // });
+    AppDispatcher.handleViewAction({
+      actionType: actions.RESUME
+    });
   },
 
   hold() {
-    // AppDispatcher.handleViewAction({
-    //   actionType: actions.HOLD
-    // });
+    AppDispatcher.handleViewAction({
+      actionType: actions.HOLD
+    });
   }
 };
 

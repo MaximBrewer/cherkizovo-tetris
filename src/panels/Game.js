@@ -42,15 +42,8 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 		activePanel == 'game' && GameStore.forceStart()
 	}, [activePanel])
 
-	const audioWoop = new Audio(woopMp3);
-
-	const woop = () => {
-		audioWoop.play();
-	}
-
 	BoardStore.on(events.LINE_CLEARED, (additionalLines) => {
-		console.log('woop')
-		woop();
+		window.woop();
 	});
 
 

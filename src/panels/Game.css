@@ -1,6 +1,6 @@
 .Game * {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .Game {
   display: block;
@@ -118,4 +118,25 @@ table.game-board {
 }
 .game-block.piece-preview {
   background: none !important;
+}
+.game-block:after {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  content: "";
+  border: 1px solid transparent;
+}
+.game-block.t:after {
+  border-top-color: #be8949;
+}
+.game-block.b:after {
+  border-bottom-color: #be8949;
+}
+.game-block.l:after {
+  border-left-color: #be8949;
+}
+.game-block.r:after {
+  border-right-color: #be8949;
 }

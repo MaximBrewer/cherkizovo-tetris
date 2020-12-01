@@ -6,61 +6,62 @@ const randomInteger = () => {
   return Math.floor(rand);
 }
 
-let I1 = randomInteger() + '', I2 = randomInteger(), I3 = randomInteger(), I4 = randomInteger()
+let I1 = randomInteger(), I2 = randomInteger(), I3 = randomInteger(), I4 = randomInteger()
 const I = {
   blocks: [
     [
-      [0, I1 + ' b', 0, 0],
-      [0, I2 + ' tb', 0, 0],
-      [0, I3 + ' tb', 0, 0],
-      [0, I4 + ' t', 0, 0]
+      [0, I1 + ' t l r', 0, 0],
+      [0, I2 + ' l r', 0, 0],
+      [0, I3 + ' l r', 0, 0],
+      [0, I4 + ' b l r', 0, 0]
     ],
     [
       [0, 0, 0, 0],
-      [I4, I3, I2, I1],
+      [I4 + ' l t b', I3 + ' t b', I2 + ' t b', I1 + ' t b r'],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, 0, I4, 0],
-      [0, 0, I3, 0],
-      [0, 0, I2, 0],
-      [0, 0, I1, 0]
+      [0, 0, I4 + ' t l r', 0],
+      [0, 0, I3 + ' l r', 0],
+      [0, 0, I2 + ' l r', 0],
+      [0, 0, I1 + ' b l r', 0]
     ],
     [
       [0, 0, 0, 0],
       [0, 0, 0, 0],
-      [I1, I2, I3, I4],
+      [I1 + ' l t b', I2 + ' t b', I3 + ' t b', I4 + ' t b r'],
       [0, 0, 0, 0]
     ]
   ],
   className: 'piece-i'
 };
 
+let J1 = randomInteger(), J2 = randomInteger(), J3 = randomInteger(), J4 = randomInteger()
 const J = {
   blocks: [
     [
-      [0, randomInteger(), 0, 0],
-      [0, randomInteger(), 0, 0],
-      [randomInteger(), randomInteger(), 0, 0],
+      [0, J1 + ' b', 0, 0],
+      [0, J2 + ' b t', 0, 0],
+      [J3, J4 + ' t l', 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [randomInteger(), 0, 0, 0],
-      [randomInteger(), randomInteger(), randomInteger(), 0],
+      [J4 + ' b', 0, 0, 0],
+      [J3 + ' t r', J2 + ' r l', J1 + ' l', 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, randomInteger(), randomInteger(), 0],
-      [0, randomInteger(), 0, 0],
-      [0, randomInteger(), 0, 0],
+      [0, J3 + ' b', J4, 0],
+      [0, J2 + ' b', 0, 0],
+      [0, J1 + ' b', 0, 0],
       [0, 0, 0, 0]
     ],
     [
       [0, 0, 0, 0],
-      [randomInteger(), randomInteger(), randomInteger(), 0],
-      [0, 0, randomInteger(), 0],
+      [J1 + ' l', J2 + ' r l', J3 + ' b r', 0],
+      [0, 0, J4 + ' t', 0],
       [0, 0, 0, 0]
     ]
   ],

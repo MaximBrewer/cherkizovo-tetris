@@ -13,6 +13,9 @@ import './Game.css';
 import bg from '../img/game-bg.jpg';
 import canavsBg from '../img/canvas-bg.png';
 
+import woopMp3 from '../sounds/woop.mp3';
+import woopOgg from '../sounds/woop.ogg';
+
 const { events } = AppConstants;
 
 const Game = ({ id, go, route, fetchedUser, activePanel }) => {
@@ -39,6 +42,11 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 		activePanel == 'game' && GameStore.forceStart()
 	}, [activePanel])
 
+	const audio = new Audio({
+		src: [ woopMp3, woopOgg ]
+	});
+	audio.play();
+
 	return (
 		<Panel id={id}>
 			{fetchedUser &&
@@ -48,6 +56,8 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 							<h4>Миссия: <br /> накрой праздничный стол с Черкизово!</h4>
 							<p>Набери больше всех баллов и&nbsp;получи крутые призы!</p>
 						</Div>
+						<audio src="sound.mp3" autoplay="autoplay"></audio>
+
 						<Tetris>
 							{({ HeldPiece, Gameboard, PieceQueue, points, linesCleared }) => {
 								return (

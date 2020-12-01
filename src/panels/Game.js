@@ -42,9 +42,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 		activePanel == 'game' && GameStore.forceStart()
 	}, [activePanel])
 
-	const audioWoop = new Audio({
-		src: [ woopMp3, woopOgg ]
-	});
+	const audioWoop = new Audio(woopMp3);
 
 	const woop = () => {
 		audioWoop.play();

@@ -21,33 +21,33 @@ const keyboardMap = {
   z: AppActions.flipCounterclockwise,
   x: AppActions.flipClockwise,
   up: AppActions.flipClockwise,
-  p: () => {
-    if (GameStore.getCurrentState() === states.PLAYING) {
-      AppActions.pause();
-    } else {
-      AppActions.resume();
-    }
-  },
-  c: AppActions.hold,
-  shift: AppActions.hold
+  // p: () => {
+  //   if (GameStore.getCurrentState() === states.PLAYING) {
+  //     AppActions.pause();
+  //   } else {
+  //     AppActions.resume();
+  //   }
+  // },
+  // c: AppActions.hold,
+  // shift: AppActions.hold
 };
 
 function addKeyboardEvents() {
   Object.keys(keyboardMap).forEach((k) => {
-    if (k === 'shift') {
-      DetectShift.bind(keyboardMap[k]);
-    } else {
+    // if (k === 'shift') {
+    //   DetectShift.bind(keyboardMap[k]);
+    // } else {
       key(k, keyboardMap[k]);
-    }
+    // }
   });
 }
 function removeKeyboardEvents() {
   Object.keys(keyboardMap).forEach((k) => {
-    if (k === 'shift') {
-      DetectShift.unbind(keyboardMap[k]);
-    } else {
+    // if (k === 'shift') {
+    //   DetectShift.unbind(keyboardMap[k]);
+    // } else {
       key.unbind(k);
-    }
+    // }
   });
 }
 

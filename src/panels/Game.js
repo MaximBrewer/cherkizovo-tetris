@@ -13,9 +13,6 @@ import './Game.css';
 import bg from '../img/game-bg.jpg';
 import canavsBg from '../img/canvas-bg.png';
 
-import woopMp3 from '../sounds/woop.mp3';
-import woopOgg from '../sounds/woop.ogg';
-
 const { events } = AppConstants;
 
 const Game = ({ id, go, route, fetchedUser, activePanel }) => {

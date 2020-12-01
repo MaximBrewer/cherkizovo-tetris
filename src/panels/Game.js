@@ -38,8 +38,6 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 	});
 
 	useEffect(() => {
-		console.log(activePanel)
-		BoardStore.clearTable();
 		GameStore.forceStart()
 	}, [activePanel])
 

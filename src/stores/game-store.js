@@ -44,6 +44,7 @@ const GameStore = _.extend(
 
     forceStart() {
       global.clearInterval(_interval);
+      BoardStore.clearTable();
       _currentState = null;
       _speed = 1000;
       this.start()

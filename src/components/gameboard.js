@@ -60,7 +60,6 @@ export default class Gameboard extends React.Component {
   componentDidMount() {
     GameStore.addChangeListener(this._onChange);
     addKeyboardEvents();
-    GameStore.start();
   }
 
   componentWillUnmount() {

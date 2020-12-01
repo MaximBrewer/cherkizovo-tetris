@@ -35,8 +35,6 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 		go(route);
 	});
 
-	ReactDOM.unmountComponentAtNode(document.getElementById('tetris-table'));
-
 	useEffect(() => {
 		console.log(activePanel)
 	}, [activePanel])
@@ -50,7 +48,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 							<h4>Миссия: <br /> накрой праздничный стол с Черкизово!</h4>
 							<p>Набери больше всех баллов и&nbsp;получи крутые призы!</p>
 						</Div>
-						<Tetris id="tetris-table">
+						<Tetris>
 							{({ HeldPiece, Gameboard, PieceQueue, points, linesCleared }) => {
 								return (
 									<Div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>

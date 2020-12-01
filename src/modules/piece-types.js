@@ -41,86 +41,87 @@ let J1 = randomInteger(), J2 = randomInteger(), J3 = randomInteger(), J4 = rando
 const J = {
   blocks: [
     [
-      [0, J1 + ' b', 0, 0],
-      [0, J2 + ' b t', 0, 0],
-      [J3, J4 + ' t l', 0, 0],
+      [0, J1 + ' t l r', 0, 0],
+      [0, J2 + ' l r', 0, 0],
+      [J3 + ' l t b', J4 + ' b r', 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [J4 + ' b', 0, 0, 0],
-      [J3 + ' t r', J2 + ' r l', J1 + ' l', 0],
+      [J4 + ' t l r', 0, 0, 0],
+      [J3 + ' l b', J2 + ' t b', J1 + ' t b r', 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, J3 + ' b', J4, 0],
-      [0, J2 + ' b', 0, 0],
-      [0, J1 + ' b', 0, 0],
+      [0, J3 + ' t l r', J4, 0],
+      [0, J2 + ' l r', 0, 0],
+      [0, J1 + ' l r b', 0, 0],
       [0, 0, 0, 0]
     ],
     [
       [0, 0, 0, 0],
-      [J1 + ' l', J2 + ' r l', J3 + ' b r', 0],
-      [0, 0, J4 + ' t', 0],
+      [J1 + ' l t', J2 + ' t b', J3 + ' t b r', 0],
+      [0, 0, J4 + ' l r b', 0],
       [0, 0, 0, 0]
     ]
   ],
   className: 'piece-j'
 };
 
+let L1 = randomInteger(), L2 = randomInteger(), L3 = randomInteger(), L4 = randomInteger()
 const L = {
   blocks: [
     [
-      [0, randomInteger(), 0, 0],
-      [0, randomInteger(), 0, 0],
-      [0, randomInteger(), randomInteger(), 0],
+      [0, L1 + ' t l r', 0, 0],
+      [0, L2 + ' l r', 0, 0],
+      [0, L3 + ' t b', L4 + ' t b r', 0],
       [0, 0, 0, 0]
     ],
     [
       [0, 0, 0, 0],
-      [randomInteger(), randomInteger(), randomInteger(), 0],
-      [randomInteger(), 0, 0, 0],
+      [L3 + ' t l', L2 + ' t b', L1 + ' t b r', 0],
+      [L4 + ' l b r', 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [randomInteger(), randomInteger(), 0, 0],
-      [0, randomInteger(), 0, 0],
-      [0, randomInteger(), 0, 0],
+      [L4 + ' t l b', L3 + ' t r', 0, 0],
+      [0, L2 + ' l r', 0, 0],
+      [0, L1 + ' l b r', 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, 0, randomInteger(), 0],
-      [randomInteger(), randomInteger(), randomInteger(), 0],
+      [0, 0, L4 + ' t l r', 0],
+      [L1 + ' t b l', L2 + ' t r', L3 + ' b r', 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ]
   ],
   className: 'piece-l'
 };
-
+let O1 = randomInteger(), O2 = randomInteger(), O3 = randomInteger(), O4 = randomInteger()
 const O = {
   blocks: [
     [
-      [randomInteger(), randomInteger(), 0, 0],
-      [randomInteger(), randomInteger(), 0, 0],
+      [O1 + ' t l', O2 + ' t r', 0, 0],
+      [O4 + ' r l', O3 + ' r b', 0, 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [randomInteger(), randomInteger(), 0, 0],
-      [randomInteger(), randomInteger(), 0, 0],
+      [O4 + ' t l', O1 + ' t r', 0, 0],
+      [O3 + ' r l', O2 + ' r b', 0, 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [randomInteger(), randomInteger(), 0, 0],
-      [randomInteger(), randomInteger(), 0, 0],
+      [O3 + ' t l', O4 + ' t r', 0, 0],
+      [O2 + ' r l', O1 + ' r b', 0, 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [randomInteger(), randomInteger(), 0, 0],
-      [randomInteger(), randomInteger(), 0, 0],
+      [O2 + ' t l', O3 + ' t r', 0, 0],
+      [O1 + ' r l', O4 + ' r b', 0, 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ]

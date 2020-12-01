@@ -2,7 +2,7 @@ import React from 'react';
 import key from 'keymaster';
 import AppActions from '../actions/app-actions';
 import GameStore from '../stores/game-store';
-import AppConstants from '../constants/app-constants';
+// import AppConstants from '../constants/app-constants';
 
 // const { states } = AppConstants;
 

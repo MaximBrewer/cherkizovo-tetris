@@ -5,6 +5,7 @@ import { Left, Right, Rotate } from '../Icons'
 import Tetris from '../components/tetris';
 import AppActions from '../actions/app-actions';
 import PieceStore from '../stores/piece-store';
+import GameStore from '../stores/game-store';
 import AppConstants from '../constants/app-constants';
 import './Game.css';
 import bg from '../img/game-bg.jpg';
@@ -33,6 +34,7 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 
 	PieceStore.on(events.PLAYER_LOST, () => {
 		setShow(false)
+		console.log(GameStore.getCurrentState())
 		setTimeout(() => go(route), 100);
 	});
 

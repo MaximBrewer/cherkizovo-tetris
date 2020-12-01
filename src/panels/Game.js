@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect } from 'react';
+import ReactDOM from "react-dom";
 import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import { Left, Right, Rotate } from '../Icons'
@@ -34,6 +35,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 		go(route);
 	});
 
+	ReactDOM.unmountComponentAtNode(document.getElementById('tetris-table'));
 
 	useEffect(() => {
 		console.log(activePanel)
@@ -48,7 +50,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 							<h4>Миссия: <br /> накрой праздничный стол с Черкизово!</h4>
 							<p>Набери больше всех баллов и&nbsp;получи крутые призы!</p>
 						</Div>
-						<Tetris>
+						<Tetris id="tetris-table">
 							{({ HeldPiece, Gameboard, PieceQueue, points, linesCleared }) => {
 								return (
 									<Div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>

@@ -14,7 +14,7 @@ bridge.send("VKWebAppInit");
 
 const audioWoop = new Audio(woopMp3);
 
-const woop = () => {
+window.woop = () => {
   audioWoop.play();
 }
 

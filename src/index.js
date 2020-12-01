@@ -11,11 +11,8 @@ import woopOgg from './sounds/woop.ogg';
 // Init VK  Mini App
 bridge.send("VKWebAppInit");
 
-
-const audioWoop = new Audio(woopMp3);
-
 window.woop = () => {
-  audioWoop.play();
+  new Audio(woopMp3).play();
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));

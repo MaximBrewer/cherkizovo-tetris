@@ -1,27 +1,35 @@
+
+const randomInteger = () =>  {
+  let min = 1, max = 16
+  // случайное число от min до (max+1)
+  let rand = min + Math.random() * (max + 1 - min);
+  return Math.floor(rand);
+}
+
 const I = {
   blocks: [
     [
-      [0, 3, 0, 0],
-      [0, 2, 0, 0],
-      [0, 4, 0, 0],
-      [0, 1, 0, 0]
+      [0, randomInteger(), 0, 0],
+      [0, randomInteger(), 0, 0],
+      [0, randomInteger(), 0, 0],
+      [0, randomInteger(), 0, 0]
     ],
     [
       [0, 0, 0, 0],
-      [1, 4, 2, 3],
+      [randomInteger(), randomInteger(), randomInteger(), randomInteger()],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, 0, 1, 0],
-      [0, 0, 4, 0],
-      [0, 0, 2, 0],
-      [0, 0, 3, 0]
+      [0, 0, randomInteger(), 0],
+      [0, 0, randomInteger(), 0],
+      [0, 0, randomInteger(), 0],
+      [0, 0, randomInteger(), 0]
     ],
     [
       [0, 0, 0, 0],
       [0, 0, 0, 0],
-      [3, 2, 4, 1],
+      [randomInteger(), randomInteger(), randomInteger(), randomInteger()],
       [0, 0, 0, 0]
     ]
   ],
@@ -31,27 +39,27 @@ const I = {
 const J = {
   blocks: [
     [
-      [0, 1, 0, 0],
-      [0, 1, 0, 0],
-      [1, 1, 0, 0],
+      [0, randomInteger(), 0, 0],
+      [0, randomInteger(), 0, 0],
+      [randomInteger(), randomInteger(), 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [1, 0, 0, 0],
-      [1, 1, 1, 0],
+      [randomInteger(), 0, 0, 0],
+      [randomInteger(), randomInteger(), randomInteger(), 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, 1, 1, 0],
-      [0, 1, 0, 0],
-      [0, 1, 0, 0],
+      [0, randomInteger(), randomInteger(), 0],
+      [0, randomInteger(), 0, 0],
+      [0, randomInteger(), 0, 0],
       [0, 0, 0, 0]
     ],
     [
       [0, 0, 0, 0],
-      [1, 1, 1, 0],
-      [0, 0, 1, 0],
+      [randomInteger(), randomInteger(), randomInteger(), 0],
+      [0, 0, randomInteger(), 0],
       [0, 0, 0, 0]
     ]
   ],
@@ -61,26 +69,26 @@ const J = {
 const L = {
   blocks: [
     [
-      [0, 1, 0, 0],
-      [0, 1, 0, 0],
-      [0, 1, 1, 0],
+      [0, randomInteger(), 0, 0],
+      [0, randomInteger(), 0, 0],
+      [0, randomInteger(), randomInteger(), 0],
       [0, 0, 0, 0]
     ],
     [
       [0, 0, 0, 0],
-      [1, 1, 1, 0],
-      [1, 0, 0, 0],
+      [randomInteger(), randomInteger(), randomInteger(), 0],
+      [randomInteger(), 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [1, 1, 0, 0],
-      [0, 1, 0, 0],
-      [0, 1, 0, 0],
+      [randomInteger(), randomInteger(), 0, 0],
+      [0, randomInteger(), 0, 0],
+      [0, randomInteger(), 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, 0, 1, 0],
-      [1, 1, 1, 0],
+      [0, 0, randomInteger(), 0],
+      [randomInteger(), randomInteger(), randomInteger(), 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ]
@@ -91,26 +99,26 @@ const L = {
 const O = {
   blocks: [
     [
-      [1, 1, 0, 0],
-      [1, 1, 0, 0],
+      [randomInteger(), randomInteger(), 0, 0],
+      [randomInteger(), randomInteger(), 0, 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [1, 1, 0, 0],
-      [1, 1, 0, 0],
+      [randomInteger(), randomInteger(), 0, 0],
+      [randomInteger(), randomInteger(), 0, 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [1, 1, 0, 0],
-      [1, 1, 0, 0],
+      [randomInteger(), randomInteger(), 0, 0],
+      [randomInteger(), randomInteger(), 0, 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [1, 1, 0, 0],
-      [1, 1, 0, 0],
+      [randomInteger(), randomInteger(), 0, 0],
+      [randomInteger(), randomInteger(), 0, 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ]
@@ -122,26 +130,26 @@ const S = {
   blocks: [
     [
       [0, 0, 0, 0],
-      [0, 1, 1, 0],
-      [1, 1, 0, 0],
+      [0, randomInteger(), randomInteger(), 0],
+      [randomInteger(), randomInteger(), 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [1, 0, 0, 0],
-      [1, 1, 0, 0],
-      [0, 1, 0, 0],
+      [randomInteger(), 0, 0, 0],
+      [randomInteger(), randomInteger(), 0, 0],
+      [0, randomInteger(), 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, 1, 1, 0],
-      [1, 1, 0, 0],
+      [0, randomInteger(), randomInteger(), 0],
+      [randomInteger(), randomInteger(), 0, 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, 1, 0, 0],
-      [0, 1, 1, 0],
-      [0, 0, 1, 0],
+      [0, randomInteger(), 0, 0],
+      [0, randomInteger(), randomInteger(), 0],
+      [0, 0, randomInteger(), 0],
       [0, 0, 0, 0]
     ]
   ],
@@ -152,26 +160,26 @@ const T = {
   blocks: [
     [
       [0, 0, 0, 0],
-      [1, 1, 1, 0],
-      [0, 1, 0, 0],
+      [randomInteger(), randomInteger(), randomInteger(), 0],
+      [0, randomInteger(), 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, 1, 0, 0],
-      [1, 1, 0, 0],
-      [0, 1, 0, 0],
+      [0, randomInteger(), 0, 0],
+      [randomInteger(), randomInteger(), 0, 0],
+      [0, randomInteger(), 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, 1, 0, 0],
-      [1, 1, 1, 0],
+      [0, randomInteger(), 0, 0],
+      [randomInteger(), randomInteger(), randomInteger(), 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, 1, 0, 0],
-      [0, 1, 1, 0],
-      [0, 1, 0, 0],
+      [0, randomInteger(), 0, 0],
+      [0, randomInteger(), randomInteger(), 0],
+      [0, randomInteger(), 0, 0],
       [0, 0, 0, 0]
     ]
   ],
@@ -182,26 +190,26 @@ const Z = {
   blocks: [
     [
       [0, 0, 0, 0],
-      [1, 1, 0, 0],
+      [randomInteger(), randomInteger(), 0, 0],
       [0, 4, 5, 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, 1, 0, 0],
-      [4, 1, 0, 0],
+      [0, randomInteger(), 0, 0],
+      [4, randomInteger(), 0, 0],
       [5, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
       [5, 4, 0, 0],
-      [0, 1, 1, 0],
+      [0, randomInteger(), randomInteger(), 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
       [0, 0, 5, 0],
-      [0, 1, 4, 0],
-      [0, 1, 0, 0],
+      [0, randomInteger(), 4, 0],
+      [0, randomInteger(), 0, 0],
       [0, 0, 0, 0]
     ]
   ],

@@ -23,13 +23,13 @@ export default class Tetris extends React.Component {
     this.state = getScore();
   }
 
-  componentWillMount() {
-    ScoreStore.addChangeListener(this._onChange);
-  }
+  // componentWillMount() {
+  //   ScoreStore.addChangeListener(this._onChange);
+  // }
 
-  componentWillUnmount() {
-    ScoreStore.removeChangeListener(this._onChange);
-  }
+  // componentWillUnmount() {
+  //   ScoreStore.removeChangeListener(this._onChange);
+  // }
 
   _onChange = () => {
     this.setState(getScore());

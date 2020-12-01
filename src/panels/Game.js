@@ -37,7 +37,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 
 	useEffect(() => {
 		console.log(activePanel)
-	},[activePanel])
+	}, [activePanel])
 
 	return (
 		<Panel id={id}>
@@ -80,15 +80,15 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 												padding: "0.5rem 1.5rem"
 											}}>
 												<Div className={`control`} style={{ display: "flex", justifyContent: "space-between" }}>
-													<a href="#" onClick={moveLeft} style={{ display: "block", width: "25%" }}>
+													<div onClick={moveLeft} style={{ display: "block", width: "25%" }}>
 														<Left style={{ display: "block", width: "100%" }} />
-													</a>
-													<a href="#" onClick={rotate} style={{ display: "block", width: "25%" }}>
+													</div>
+													<div onClick={rotate} style={{ display: "block", width: "25%" }}>
 														<Rotate style={{ display: "block", width: "100%" }} />
-													</a>
-													<a href="#" onClick={moveRight} style={{ display: "block", width: "25%" }}>
+													</div>
+													<div onClick={moveRight} style={{ display: "block", width: "25%" }}>
 														<Right style={{ display: "block", width: "100%" }} />
-													</a>
+													</div>
 												</Div>
 											</Div>
 										</Div>

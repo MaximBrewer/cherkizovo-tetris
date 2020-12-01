@@ -31,6 +31,7 @@ const App = () => {
 	const [snackbar, setSnackbar] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
 
+
 	useEffect(() => {
 		if (bridge.supports("VKWebAppResizeWindow")) {
 			bridge.send("VKWebAppResizeWindow", { "width": 800, "height": 568 });
@@ -101,6 +102,7 @@ const App = () => {
 				fetchedUser={fetchedUser}
 				fetchedState={fetchedState}
 				go={go}
+				activePanel={activePanel}
 				route={ROUTES.OUTRO}
 				snackbarError={snackbar}
 			/>
@@ -109,7 +111,7 @@ const App = () => {
 				fetchedUser={fetchedUser}
 				fetchedState={fetchedState}
 				go={go}
-				route={ROUTES.GAME}
+				route={ROUTES.INTRO}
 				snackbarError={snackbar}
 			/>
 		</View>

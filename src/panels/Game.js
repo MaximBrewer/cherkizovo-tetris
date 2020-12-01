@@ -6,7 +6,6 @@ import Tetris from '../components/tetris';
 import AppActions from '../actions/app-actions';
 import PieceStore from '../stores/piece-store';
 import GameStore from '../stores/game-store';
-import BoardStore from '../stores/board-store';
 import AppConstants from '../constants/app-constants';
 import './Game.css';
 import bg from '../img/game-bg.jpg';
@@ -14,7 +13,7 @@ import canavsBg from '../img/canvas-bg.png';
 
 const { events } = AppConstants;
 
-const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
+const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 
 	const moveLeft = (e) => {
 		e.preventDefault();
@@ -31,9 +30,15 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 	}
 
 	PieceStore.on(events.PLAYER_LOST, () => {
-		console.log(BoardStore.clearAll());
+		console.log(GameStore.getGameBoard())
+		BoardStore.getBoard();
 		go(route);
 	});
+
+
+	useEffect(() => {
+		console.log(activePanel)
+	},[activePanel])
 
 	return (
 		<Panel id={id}>

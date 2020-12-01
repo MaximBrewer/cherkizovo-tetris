@@ -43,7 +43,9 @@ const GameStore = _.extend(
     },
 
     forceStart() {
-      _currentState = null
+      global.clearInterval(_interval);
+      _currentState = null;
+      _speed = 1000;
       this.start()
     },
 

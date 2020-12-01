@@ -35,8 +35,7 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 
 	PieceStore.on(events.PLAYER_LOST, () => {
 		setShow(false)
-		// go()
-		console.log(events.PLAYER_LOST)
+		go()
 	});
 
 	return (

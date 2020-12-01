@@ -7,7 +7,7 @@ import './Outro.css';
 import bg from '../img/intro-bg.jpg';
 import logo from '../img/logo-white.png';
 
-const Outro = ({ id, route, fetchedUser }) => {
+const Outro = ({ id, route, fetchedUser, go }) => {
 	const replay = () => {
 
 	}
@@ -15,7 +15,7 @@ const Outro = ({ id, route, fetchedUser }) => {
 		<Panel id={id}>
 			{fetchedUser &&
 				<Fragment>
-					<Div className='Intro' style={{ textAlign: "center", backgroundImage: 'url(' + bg + ')', display: "flex", justifyContent: "center", alignItems: "center" }} >
+					<Div className='Outro' style={{ textAlign: "center", backgroundImage: 'url(' + bg + ')', display: "flex", justifyContent: "center", alignItems: "center" }} >
 						{/* {fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200} /> : null}
 					<h2>Привет, {fetchedUser.first_name}</h2> */}
 						<Div style={{ minHeight: "70%", color: "#ffffff" }}>
@@ -35,4 +35,4 @@ const Outro = ({ id, route, fetchedUser }) => {
 		</Panel>
 	)
 }
-export default Intro;
+export default Outro;

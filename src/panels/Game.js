@@ -32,13 +32,11 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 	}
 
 	PieceStore.on(events.PLAYER_LOST, () => {
-		// console.log(GameStore.getGameBoard())
-		// BoardStore.getBoard();
 		go(route);
 	});
 
 	useEffect(() => {
-		GameStore.forceStart()
+		activePanel == 'game' && GameStore.forceStart()
 	}, [activePanel])
 
 	return (

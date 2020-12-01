@@ -47,11 +47,12 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 	const woop = () => {
 		audioWoop.play();
 	}
-	
+
 	PieceStore.on(events.LINE_CLEARED, () => {
+		console.log('woop')
 		woop();
 	});
-	
+
 
 	return (
 		<Panel id={id}>
@@ -62,8 +63,6 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 							<h4>Миссия: <br /> накрой праздничный стол с Черкизово!</h4>
 							<p>Набери больше всех баллов и&nbsp;получи крутые призы!</p>
 						</Div>
-						<audio src="sound.mp3" autoplay="autoplay"></audio>
-
 						<Tetris>
 							{({ HeldPiece, Gameboard, PieceQueue, points, linesCleared }) => {
 								return (

@@ -1,20 +1,16 @@
 import React, { Fragment, useRef, useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
-import PanelHeader from '@vkontakte/vkui/dist/components/PanelHeader/PanelHeader';
-import Button from '@vkontakte/vkui/dist/components/Button/Button';
-import Group from '@vkontakte/vkui/dist/components/Group/Group';
-import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
-import FixedLayout from '@vkontakte/vkui/dist/components/FixedLayout/FixedLayout';
-import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import { Left, Right, Rotate } from '../Icons'
 import Tetris from '../components/tetris';
 import AppActions from '../actions/app-actions';
+import PieceStore from '../stores/piece-store';
 
 import './Game.css';
 import bg from '../img/game-bg.jpg';
 import canavsBg from '../img/canvas-bg.png';
+
+
 
 const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 	const moveLeft = (e) => {
@@ -36,6 +32,10 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 	const [canvas, setCanvas] = useState({
 		width: 288
 	})
+	
+	PieceStore.on(events.PLAYER_LOST, () => {
+		go()
+	});
 
 	return (
 		<Panel id={id}>

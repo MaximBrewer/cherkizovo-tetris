@@ -10,11 +10,13 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 import Game from './panels/Game';
 import Intro from './panels/Intro';
+import Outro from './panels/Outro';
 import './App.css';
 
 const ROUTES = {
 	GAME: 'game',
 	INTRO: 'intro',
+	OUTRO: 'outro',
 };
 
 const STORAGE_KEYS = {
@@ -28,7 +30,6 @@ const App = () => {
 	const [fetchedState, setFetchedState] = useState(null);
 	const [snackbar, setSnackbar] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
-	const [userHasSeenIntro, setUserHasSeenIntro] = useState(false);
 
 	useEffect(() => {
 		if (bridge.supports("VKWebAppResizeWindow")) {
@@ -54,10 +55,6 @@ const App = () => {
 								setFetchedState(data[STORAGE_KEYS.STATE]);
 								break;
 							case STORAGE_KEYS.STATUS:
-								// if (data[key] && data[key].hasSeenIntro) {
-								// 	setActivePanel(ROUTES.GAME);
-								// 	setUserHasSeenIntro(true);
-								// }
 								break;
 							default:
 								break;
@@ -89,68 +86,30 @@ const App = () => {
 		setActivePanel(panel);
 	};
 
-	// const viewIntro = async (panel) => {
-	// 	try {
-	// 		await bridge.send('VKWebAppStorageSet', {
-	// 			key: STORAGE_KEYS.STATUS,
-	// 			value: JSON.stringify({
-	// 				hasSeenIntro: true,
-	// 			}),
-	// 		});
-	// 		go(panel);
-	// 	} catch (error) {
-	// 		setSnackbar(<Snackbar
-	// 			layout='vertical'
-	// 			onClose={() => setSnackbar(null)}
-	// 			before={<Avatar size={24} style={{ backgroundColor: 'var(--dynamic_red)' }}><Icon24Error fill='#fff' width={14} height={14} /></Avatar>}
-	// 			duration={900}
-	// 		>
-	// 			Проблема с отправкой данных в Storage
-	// 		</Snackbar>
-	// 		);
-	// 	}
-	// }
-
-	// const goBack = async (panel) => {
-	// 	try {
-	// 		await bridge.send('VKWebAppStorageSet', {
-	// 			key: STORAGE_KEYS.STATUS,
-	// 			value: JSON.stringify({
-	// 				hasSeenIntro: false,
-	// 			}),
-	// 		});
-	// 		go(panel);
-	// 	} catch (error) {
-	// 		setSnackbar(<Snackbar
-	// 			layout='vertical'
-	// 			onClose={() => setSnackbar(null)}
-	// 			before={<Avatar size={24} style={{ backgroundColor: 'var(--dynamic_red)' }}><Icon24Error fill='#fff' width={14} height={14} /></Avatar>}
-	// 			duration={900}
-	// 		>
-	// 			Проблема с отправкой данных в Storage
-	// 		</Snackbar>
-	// 		);
-	// 	}
-	// }
-
 	return (
 		<View activePanel={activePanel} popout={popout}>
-			<Game
-				id={ROUTES.GAME}
-				fetchedUser={fetchedUser}
-				fetchedState={fetchedState}
-				go={go}
-				route={ROUTES.INTRO}
-				userHasSeenIntro={userHasSeenIntro}
-				snackbarError={snackbar}
-			/>
 			<Intro
 				id={ROUTES.INTRO}
 				fetchedUser={fetchedUser}
 				fetchedState={fetchedState}
 				go={go}
 				route={ROUTES.GAME}
-				userHasSeenIntro={userHasSeenIntro}
+				snackbarError={snackbar}
+			/>
+			<Game
+				id={ROUTES.GAME}
+				fetchedUser={fetchedUser}
+				fetchedState={fetchedState}
+				go={go}
+				route={ROUTES.OUTRO}
+				snackbarError={snackbar}
+			/>
+			<Outro
+				id={ROUTES.OUTRO}
+				fetchedUser={fetchedUser}
+				fetchedState={fetchedState}
+				go={go}
+				route={ROUTES.GAME}
 				snackbarError={snackbar}
 			/>
 		</View>

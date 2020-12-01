@@ -5,6 +5,9 @@ import { Left, Right, Rotate } from '../Icons'
 import Tetris from '../components/tetris';
 import AppActions from '../actions/app-actions';
 import PieceStore from '../stores/piece-store';
+import AppConstants from '../constants/app-constants';
+
+const { events } = AppConstants;
 
 import './Game.css';
 import bg from '../img/game-bg.jpg';
@@ -32,7 +35,7 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 	const [canvas, setCanvas] = useState({
 		width: 288
 	})
-	
+
 	PieceStore.on(events.PLAYER_LOST, () => {
 		go()
 	});

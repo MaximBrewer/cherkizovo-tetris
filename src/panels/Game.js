@@ -19,16 +19,16 @@ import canavsBg from '../img/canvas-bg.png';
 const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 	const moveLeft = (e) => {
 		e.preventDefault();
-		AppActions.moveLeft
+		AppActions.moveLeft()
 	}
 	const moveRight = (e) => {
 		e.preventDefault();
-		AppActions.moveLeft
+		AppActions.moveRight()
 
 	}
 	const rotate = (e) => {
 		e.preventDefault();
-		AppActions.flipClockwise
+		AppActions.flipClockwise()
 	}
 
 	const canvasOuter = useRef(null);

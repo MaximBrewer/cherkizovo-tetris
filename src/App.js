@@ -53,10 +53,10 @@ const App = () => {
 								setFetchedState(data[STORAGE_KEYS.STATE]);
 								break;
 							case STORAGE_KEYS.STATUS:
-								if (data[key] && data[key].hasSeenIntro) {
-									setActivePanel(ROUTES.GAME);
-									setUserHasSeenIntro(true);
-								}
+								// if (data[key] && data[key].hasSeenIntro) {
+								// 	setActivePanel(ROUTES.GAME);
+								// 	setUserHasSeenIntro(true);
+								// }
 								break;
 							default:
 								break;
@@ -88,49 +88,49 @@ const App = () => {
 		setActivePanel(panel);
 	};
 
-	const viewIntro = async (panel) => {
-		try {
-			await bridge.send('VKWebAppStorageSet', {
-				key: STORAGE_KEYS.STATUS,
-				value: JSON.stringify({
-					hasSeenIntro: true,
-				}),
-			});
-			go(panel);
-		} catch (error) {
-			setSnackbar(<Snackbar
-				layout='vertical'
-				onClose={() => setSnackbar(null)}
-				before={<Avatar size={24} style={{ backgroundColor: 'var(--dynamic_red)' }}><Icon24Error fill='#fff' width={14} height={14} /></Avatar>}
-				duration={900}
-			>
-				Проблема с отправкой данных в Storage
-			</Snackbar>
-			);
-		}
-	}
+	// const viewIntro = async (panel) => {
+	// 	try {
+	// 		await bridge.send('VKWebAppStorageSet', {
+	// 			key: STORAGE_KEYS.STATUS,
+	// 			value: JSON.stringify({
+	// 				hasSeenIntro: true,
+	// 			}),
+	// 		});
+	// 		go(panel);
+	// 	} catch (error) {
+	// 		setSnackbar(<Snackbar
+	// 			layout='vertical'
+	// 			onClose={() => setSnackbar(null)}
+	// 			before={<Avatar size={24} style={{ backgroundColor: 'var(--dynamic_red)' }}><Icon24Error fill='#fff' width={14} height={14} /></Avatar>}
+	// 			duration={900}
+	// 		>
+	// 			Проблема с отправкой данных в Storage
+	// 		</Snackbar>
+	// 		);
+	// 	}
+	// }
 
-	const goBack = async (panel) => {
-		try {
-			await bridge.send('VKWebAppStorageSet', {
-				key: STORAGE_KEYS.STATUS,
-				value: JSON.stringify({
-					hasSeenIntro: false,
-				}),
-			});
-			go(panel);
-		} catch (error) {
-			setSnackbar(<Snackbar
-				layout='vertical'
-				onClose={() => setSnackbar(null)}
-				before={<Avatar size={24} style={{ backgroundColor: 'var(--dynamic_red)' }}><Icon24Error fill='#fff' width={14} height={14} /></Avatar>}
-				duration={900}
-			>
-				Проблема с отправкой данных в Storage
-			</Snackbar>
-			);
-		}
-	}
+	// const goBack = async (panel) => {
+	// 	try {
+	// 		await bridge.send('VKWebAppStorageSet', {
+	// 			key: STORAGE_KEYS.STATUS,
+	// 			value: JSON.stringify({
+	// 				hasSeenIntro: false,
+	// 			}),
+	// 		});
+	// 		go(panel);
+	// 	} catch (error) {
+	// 		setSnackbar(<Snackbar
+	// 			layout='vertical'
+	// 			onClose={() => setSnackbar(null)}
+	// 			before={<Avatar size={24} style={{ backgroundColor: 'var(--dynamic_red)' }}><Icon24Error fill='#fff' width={14} height={14} /></Avatar>}
+	// 			duration={900}
+	// 		>
+	// 			Проблема с отправкой данных в Storage
+	// 		</Snackbar>
+	// 		);
+	// 	}
+	// }
 
 	return (
 		<View activePanel={activePanel} popout={popout}>
@@ -138,7 +138,7 @@ const App = () => {
 				id={ROUTES.GAME}
 				fetchedUser={fetchedUser}
 				fetchedState={fetchedState}
-				go={goBack}
+				go={go}
 				route={ROUTES.INTRO}
 				userHasSeenIntro={userHasSeenIntro}
 				snackbarError={snackbar}
@@ -147,7 +147,7 @@ const App = () => {
 				id={ROUTES.INTRO}
 				fetchedUser={fetchedUser}
 				fetchedState={fetchedState}
-				go={viewIntro}
+				go={go}
 				route={ROUTES.GAME}
 				userHasSeenIntro={userHasSeenIntro}
 				snackbarError={snackbar}

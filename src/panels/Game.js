@@ -35,7 +35,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 	});
 
 	useEffect(() => {
-		activePanel == 'game' && GameStore.forceStart()
+		activePanel === 'game' && GameStore.forceStart()
 		window.audioMusic.play()
 	}, [activePanel])
 

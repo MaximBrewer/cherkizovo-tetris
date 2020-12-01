@@ -14,6 +14,7 @@ const ScoreStore = _.extend(
     clearPoints() {
       points = 0;
       linesCleared = 0;
+      this.emitChange();
     },
     getPoints() {
       return points;

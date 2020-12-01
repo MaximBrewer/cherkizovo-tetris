@@ -53,14 +53,14 @@ const J = {
       [0, 0, 0, 0]
     ],
     [
-      [0, J3 + ' t l r', J4, 0],
+      [0, J3 + ' t r', J4 + ' t b r', 0],
       [0, J2 + ' l r', 0, 0],
       [0, J1 + ' l r b', 0, 0],
       [0, 0, 0, 0]
     ],
     [
       [0, 0, 0, 0],
-      [J1 + ' l t', J2 + ' t b', J3 + ' t b r', 0],
+      [J1 + ' b l t', J2 + ' t b', J3 + ' t r', 0],
       [0, 0, J4 + ' l r b', 0],
       [0, 0, 0, 0]
     ]
@@ -74,7 +74,7 @@ const L = {
     [
       [0, L1 + ' t l r', 0, 0],
       [0, L2 + ' l r', 0, 0],
-      [0, L3 + ' t b', L4 + ' t b r', 0],
+      [0, L3 + ' l b', L4 + ' t b r', 0],
       [0, 0, 0, 0]
     ],
     [
@@ -91,7 +91,7 @@ const L = {
     ],
     [
       [0, 0, L4 + ' t l r', 0],
-      [L1 + ' t b l', L2 + ' t r', L3 + ' b r', 0],
+      [L1 + ' t b l', L2 + ' t b', L3 + ' b r', 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ]
@@ -103,25 +103,25 @@ const O = {
   blocks: [
     [
       [O1 + ' t l', O2 + ' t r', 0, 0],
-      [O4 + ' r l', O3 + ' r b', 0, 0],
+      [O4 + ' b l', O3 + ' r b', 0, 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
       [O4 + ' t l', O1 + ' t r', 0, 0],
-      [O3 + ' r l', O2 + ' r b', 0, 0],
+      [O3 + ' b l', O2 + ' r b', 0, 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
       [O3 + ' t l', O4 + ' t r', 0, 0],
-      [O2 + ' r l', O1 + ' r b', 0, 0],
+      [O2 + ' b l', O1 + ' r b', 0, 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
       [O2 + ' t l', O3 + ' t r', 0, 0],
-      [O1 + ' r l', O4 + ' r b', 0, 0],
+      [O1 + ' b l', O4 + ' r b', 0, 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ]
@@ -129,30 +129,31 @@ const O = {
   className: 'piece-o'
 };
 
+let S1 = randomInteger(), S2 = randomInteger(), S3 = randomInteger(), S4 = randomInteger()
 const S = {
   blocks: [
     [
       [0, 0, 0, 0],
-      [0, randomInteger(), randomInteger(), 0],
-      [randomInteger(), randomInteger(), 0, 0],
+      [0, S3 + ' t l', S4 + ' t b r', 0],
+      [S1 + ' b l t', S2 + ' b r', 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [randomInteger(), 0, 0, 0],
-      [randomInteger(), randomInteger(), 0, 0],
-      [0, randomInteger(), 0, 0],
+      [S1 + ' t l r', 0, 0, 0],
+      [S2 + ' b l', S3 + ' t r', 0, 0],
+      [0, S4 + ' b r l', 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, randomInteger(), randomInteger(), 0],
-      [randomInteger(), randomInteger(), 0, 0],
+      [0, S2 + ' t l', S1 + ' b r t', 0],
+      [S4 + ' b r t', S3 + ' b r', 0, 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0]
     ],
     [
-      [0, randomInteger(), 0, 0],
-      [0, randomInteger(), randomInteger(), 0],
-      [0, 0, randomInteger(), 0],
+      [0, S4 + ' t l r', 0, 0],
+      [0, S3 + ' b r', S2 + ' t r', 0],
+      [0, 0, S1 + ' b r l', 0],
       [0, 0, 0, 0]
     ]
   ],

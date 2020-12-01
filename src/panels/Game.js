@@ -37,6 +37,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 
 	useEffect(() => {
 		activePanel == 'game' && GameStore.forceStart()
+		window.audioMusic.play()
 	}, [activePanel])
 
 	BoardStore.on(events.LINE_CLEARED, (additionalLines) => {

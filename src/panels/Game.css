@@ -59,9 +59,6 @@
 .piece-z {
   background-color: #e3cdaa;
 }
-.piece-preview {
-  background-color: transparent;
-}
 
 table.game-board {
   border-collapse: collapse;
@@ -152,4 +149,11 @@ table.game-board {
 }
 .game-block.b.l:after {
   border-bottom-left-radius: 2px;
+}
+
+.piece-preview {
+  background-color: transparent;
+}
+.piece-preview:after {
+  border-color: transparent !important;
 }

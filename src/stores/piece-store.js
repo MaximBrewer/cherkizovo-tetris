@@ -138,7 +138,7 @@ const PieceStore = _.extend(
     },
 
     dispatcherIndex: AppDispatcher.register((payload) => {
-      const { action } = payload; // this is our action from handleViewAction
+      const { action } = payload;
       switch (action.actionType) {
         case actions.MOVE_DOWN:
           emitChangeIf(_moveDown());
@@ -167,6 +167,7 @@ const PieceStore = _.extend(
         case actions.HOLD:
           emitChangeIf(_holdPiece());
           break;
+        default: break;
       }
 
       // going into a queue of promises so we want to return something positive for a resolve

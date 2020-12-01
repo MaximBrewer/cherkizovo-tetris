@@ -14,6 +14,7 @@ import canavsBg from '../img/canvas-bg.png';
 const { events } = AppConstants;
 
 const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
+
 	const moveLeft = (e) => {
 		e.preventDefault();
 		AppActions.moveLeft()
@@ -30,18 +31,17 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 
 	const canvasOuter = useRef(null);
 
-	const [canvas, setCanvas] = useState({
-		width: 288
-	})
+	const [show, setShow] = useState(true);
 
 	PieceStore.on(events.PLAYER_LOST, () => {
+		setShow(false)
 		// go()
 		console.log(events.PLAYER_LOST)
 	});
 
 	return (
 		<Panel id={id}>
-			{fetchedUser &&
+			{fetchedUser && show &&
 				<Fragment>
 					<Div className='Game' style={{ textAlign: "center", backgroundImage: 'url(' + bg + ')', color: "#ffffff" }} >
 						<Div style={{ paddingLeft: "1rem" }}>

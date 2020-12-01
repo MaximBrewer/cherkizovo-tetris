@@ -10,6 +10,7 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 import Game from './panels/Game';
 import Intro from './panels/Intro';
+import './App.css';
 
 const ROUTES = {
 	GAME: 'game',

@@ -30,6 +30,7 @@ const pointsPerLine = 3000;
 BoardStore.on(events.LINE_CLEARED, (additionalLines) => {
   linesCleared += additionalLines;
 
+  GameStore.faster()
   // what's this called?
   if (additionalLines === 4) {
     ScoreStore.addPoints(pointsPerLine * 2);

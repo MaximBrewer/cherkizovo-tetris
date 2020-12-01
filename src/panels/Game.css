@@ -86,6 +86,36 @@ table.game-board {
 .game-block.type-6 {
   background-image: url(../img/sausages/6.png);
 }
+.game-block.type-7 {
+  background-image: url(../img/sausages/7.png);
+}
+.game-block.type-8 {
+  background-image: url(../img/sausages/8.png);
+}
+.game-block.type-9 {
+  background-image: url(../img/sausages/9.png);
+}
+.game-block.type-10 {
+  background-image: url(../img/sausages/10.png);
+}
+.game-block.type-11 {
+  background-image: url(../img/sausages/11.png);
+}
+.game-block.type-12 {
+  background-image: url(../img/sausages/12.png);
+}
+.game-block.type-13 {
+  background-image: url(../img/sausages/13.png);
+}
+.game-block.type-14 {
+  background-image: url(../img/sausages/14.png);
+}
+.game-block.type-15 {
+  background-image: url(../img/sausages/15.png);
+}
+.game-block.type-16 {
+  background-image: url(../img/sausages/16.png);
+}
 .game-block.piece-preview {
   background: none !important;
 }

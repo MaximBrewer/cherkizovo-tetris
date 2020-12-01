@@ -11,6 +11,10 @@ let linesCleared = 0;
 
 const ScoreStore = _.extend(
   {
+    clearPoints() {
+      points = 0;
+      linesCleared = 0;
+    },
     getPoints() {
       return points;
     },

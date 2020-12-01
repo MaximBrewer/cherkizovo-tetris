@@ -5,6 +5,7 @@ import EventEmitter from '../modules/event-emitter';
 import BoardStore from './board-store';
 import PieceStore from './piece-store';
 import pieceSetter from '../modules/piece-setter';
+import ScoreStore from '../stores/score-store';
 
 const { states, actions, events } = AppConstants;
 
@@ -45,6 +46,7 @@ const GameStore = _.extend(
     forceStart() {
       global.clearInterval(_interval);
       BoardStore.clearTable();
+      ScoreStore.clearPoints();
       _currentState = null;
       _speed = 1000;
       this.start()

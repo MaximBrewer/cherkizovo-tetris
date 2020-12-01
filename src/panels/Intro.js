@@ -24,7 +24,8 @@ const Intro = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 						<h2><img src={logo} alt="" style={{ width: "12rem" }} /></h2>
 						<h3>Миссия: <br /> накрой праздничный стол с&nbsp;Черкизово!</h3>
 						<p>Набери больше всех баллов и&nbsp;получи крутые призы!</p>
-						<button className={`btn-red`} onClick={() => go(route)}>Играть</button>
+						<p></p>
+						<p><button className={`btn-red`} onClick={() => go(route)}>Играть</button></p>
 					</Div>
 				</Div>
 			</Fragment>

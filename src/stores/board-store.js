@@ -66,6 +66,18 @@ const BoardStore = _.extend(
       return true;
     },
 
+    clearAll() {
+      let linesCleared = 0;
+      for (let y = 0; y < _gameBoard.length; y++) {
+        _gameBoard.splice(y, 1);
+        _gameBoard.unshift(buildGameRow());
+      }
+
+      if (linesCleared) {
+        this.emitClearedLines(linesCleared);
+      }
+    },
+
     clearFullLines() {
       let linesCleared = 0;
       for (let y = 0; y < _gameBoard.length; y++) {

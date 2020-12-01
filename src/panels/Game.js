@@ -31,8 +31,7 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 	}
 
 	PieceStore.on(events.PLAYER_LOST, () => {
-		console.log(GameStore.getGameBoard())
-		console.log(BoardStore.getBoard());
+		console.log(BoardStore.clearAll());
 		go(route);
 	});
 

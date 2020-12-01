@@ -48,7 +48,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 		audioWoop.play();
 	}
 
-	PieceStore.on(events.LINE_CLEARED, () => {
+	BoardStore.on(events.LINE_CLEARED, (additionalLines) => {
 		console.log('woop')
 		woop();
 	});

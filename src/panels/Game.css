@@ -165,11 +165,11 @@ table.game-board {
 .Game p.numbers span {
   color: white;
   display: block;
-  margin: 0.2rem;
+  margin: 0.1rem;
   background: #aa2223;
   border-radius: 0.4rem;
-  line-height: 3rem;
-  font-size: 3rem;
-  padding: 0.5rem 0.3rem;
+  line-height: 1.8rem;
+  font-size: 1.8rem;
+  padding: 0.3rem 0.2rem;
   font-weight: bold;
 }

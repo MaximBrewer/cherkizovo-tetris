@@ -30,10 +30,13 @@ const App = () => {
 	const [fetchedState, setFetchedState] = useState(null);
 	const [snackbar, setSnackbar] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
+	const [fetchedPlatform, setPlatform] = useState(null);
 
 
 	useEffect(() => {
-		if (bridge.supports("VKWebAppResizeWindow")) {
+		const platform = await bridge.send('VKWebAppGetClientVersion');
+		setPlatform(platform);
+		if (platform && platform.platform == 'web' && bridge.supports("VKWebAppResizeWindow")) {
 			bridge.send("VKWebAppResizeWindow", { "width": 800, "height": 568 });
 		}
 		bridge.subscribe(({ detail: { type, data } }) => {

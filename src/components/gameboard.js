@@ -53,7 +53,6 @@ const watchKeys = (e) => {
     default:
       break;
   }
-  console.log(e.keyCode);
   // Object.keys(keyboardMap).forEach((k) => {
   //   if(e.)
   // })

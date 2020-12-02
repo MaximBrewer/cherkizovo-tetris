@@ -3,11 +3,12 @@ import React, { Fragment, useEffect } from 'react';
 import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import ScoreStore from '../stores/score-store';
-import axios from "axios";
 
 import './Outro.css';
 import bg from '../img/intro-bg.jpg';
 import logo from '../img/logo-white.png';
+
+const axios = require('axios');
 
 const Outro = ({ id, route, fetchedUser, go, bridge, activePanel }) => {
 

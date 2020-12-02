@@ -22,11 +22,13 @@ window.audioMusic.loop = true;
 
 Pusher.logToConsole = true;
 
-var pusher = new Pusher('527099ad7df4062c0694', {
+const pusher = new Pusher('527099ad7df4062c0694', {
   cluster: 'eu'
 });
 
-var channel = pusher.subscribe('cherkizovo');
+const channel = pusher.subscribe('cherkizovo');
+
+console.log(channel)
 channel.bind('refresh', function (data) {
   console.log('pusher')
   console.log(JSON.stringify(data))

@@ -111,7 +111,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 	const [scores, setScores] = useState([]);
 
 	useEffect(() => {
-		axios.post('https://cherkizovo.fun/api/scores')
+		axios.get('https://cherkizovo.fun/api/scores')
 			.then(function (response) {
 				console.log(response.data)
 				setScores(response.data)

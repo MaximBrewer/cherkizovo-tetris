@@ -28,11 +28,11 @@ const pusher = new Pusher('527099ad7df4062c0694', {
 
 const channel = pusher.subscribe('cherkizovo');
 
-console.log(channel)
 channel.bind('refresh', function (data) {
   console.log('pusher')
   console.log(JSON.stringify(data))
 });
+console.log(channel)
 
 ReactDOM.render(<App />, document.getElementById("root"));
 if (false && process.env.NODE_ENV === "development") {

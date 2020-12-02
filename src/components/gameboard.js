@@ -13,13 +13,13 @@ function gameBoard() {
 }
 
 const keyboardMap = {
-  down: AppActions.moveDown,
-  left: AppActions.moveLeft,
-  right: AppActions.moveRight,
-  space: AppActions.hardDrop,
-  z: AppActions.flipCounterclockwise,
-  x: AppActions.flipClockwise,
-  up: AppActions.flipClockwise,
+  x: AppActions.moveDown,
+  z: AppActions.moveLeft,
+  c: AppActions.moveRight,
+  x: AppActions.hardDrop,
+  // z: AppActions.flipCounterclockwise,
+  // x: AppActions.flipClockwise,
+  // up: AppActions.flipClockwise,
   // p: () => {
   //   if (GameStore.getCurrentState() === states.PLAYING) {
   //     AppActions.pause();

@@ -209,9 +209,15 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 													</div>
 												</Div>
 											</Div>
-											<div className={`control-button sound`} onClick={switchSound}>
-												<div><Sound style={{ display: "block", width: "100%" }} /></div>
-											</div>
+											<Div style={{
+												display: "flex",
+												justifyContent: "center",
+												alignItems: "center"
+											}}>
+												<div className={`control-button sound`} onClick={switchSound}>
+													<div><Sound style={{ display: "block", width: "100%" }} /></div>
+												</div>
+											</Div>
 										</Div>
 									</Div>
 								);

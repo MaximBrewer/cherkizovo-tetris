@@ -11,6 +11,7 @@ import BoardStore from '../stores/board-store'
 import './Game.css';
 import bg from '../img/game-bg.jpg';
 import canavsBg from '../img/canvas-bg.png';
+import ScoreStore from '../stores/score-store';
 
 const { events } = AppConstants;
 

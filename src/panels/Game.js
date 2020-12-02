@@ -109,6 +109,9 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify({
+				user_id: fetchedUser.id,
+				name: fetchedUser.first_name + ' ' + fetchedUser.last_name,
+				avatar: fetchedUser.photo_200,
 				score: ScoreStore.getPoints()
 			})
 		})

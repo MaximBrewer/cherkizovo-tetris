@@ -32,23 +32,56 @@ const keyboardMap = {
   // shift: AppActions.hold
 };
 
+const toUp = (e) => {
+  e.preventDefault();
+  e.stopPropogation();
+  keyboardMap.up
+}
+
+const toDown = (e) => {
+  e.preventDefault();
+  e.stopPropogation();
+  keyboardMap.space
+}
+
+const toRight = (e) => {
+  e.preventDefault();
+  e.stopPropogation();
+  keyboardMap.right
+}
+
+const toLeft = (e) => {
+  e.preventDefault();
+  e.stopPropogation();
+  keyboardMap.left
+}
+
 function addKeyboardEvents() {
-  Object.keys(keyboardMap).forEach((k) => {
-    // if (k === 'shift') {
-    //   DetectShift.bind(keyboardMap[k]);
-    // } else {
-      key(k, keyboardMap[k]);
-    // }
-  });
+  key("up", toUp);
+  key("down", toDown);
+  key("right", toRight);
+  key("left", toLeft);
+  // Object.keys(keyboardMap).forEach((k) => {
+  //   // if (k === 'shift') {
+  //   //   DetectShift.bind(keyboardMap[k]);
+  //   // } else {
+  //   // key(k, keyboardMap[k]);
+  //   // }
+  //   window.addEventListener('keydown',)
+  // });
 }
 function removeKeyboardEvents() {
-  Object.keys(keyboardMap).forEach((k) => {
-    // if (k === 'shift') {
-    //   DetectShift.unbind(keyboardMap[k]);
-    // } else {
-      key.unbind(k);
-    // }
-  });
+  key.unbind("up");
+  key.unbind("down");
+  key.unbind("left");
+  key.unbind("right");
+  // Object.keys(keyboardMap).forEach((k) => {
+  //   // if (k === 'shift') {
+  //   //   DetectShift.unbind(keyboardMap[k]);
+  //   // } else {
+  //   // key.unbind(k);
+  //   // }
+  // });
 }
 
 export default class Gameboard extends React.Component {

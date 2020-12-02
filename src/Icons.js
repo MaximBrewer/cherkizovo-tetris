@@ -8,7 +8,7 @@ export const Left = ({ style }) => {
 }
 export const Right = ({ style }) => {
     return (
-        <svg width="29" height="34" viewBox="0 0 29 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 29 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M29 17L0.499998 33.4545L0.5 0.545516L29 17Z" fill="white" />
         </svg>
     )

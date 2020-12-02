@@ -178,7 +178,7 @@ table.game-board {
 .Game .scores {
   background: rgba(96, 124, 225, 0.47);
   border-radius: 0.5rem;
-  padding: 1.125rem 1.5rem 1.25rem;
+  padding: 0.5rem 0.75rem 0.675rem;
 }
 .Game .scores ol {
   padding: 0;

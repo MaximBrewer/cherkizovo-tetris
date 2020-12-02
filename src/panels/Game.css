@@ -203,7 +203,7 @@ table.game-board {
 }
 .Game .control-button > div > * {
   position: absolute;
-  top: 25%;
-  left: 25%;
-  width: 50%;
+  top: 10%;
+  left: 10%;
+  width: 80%;
 }

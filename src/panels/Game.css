@@ -218,8 +218,8 @@ table.game-board {
 }
 .Game .control-button:nth-child(3) > div > * {
   position: absolute;
-  top: 16%;
-  left: 18%;
+  top: -16%;
+  left: 22%;
   width: 60%;
 }
 .Game .control-button:nth-child(4) > div > * {

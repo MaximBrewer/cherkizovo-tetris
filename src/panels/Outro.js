@@ -13,7 +13,7 @@ const axios = require('axios');
 const Outro = ({ id, route, fetchedUser, go, bridge, activePanel }) => {
 
 	useEffect(() => {
-		activePanel === 'outro' && axios.post('https://cherkizovo.fun', {
+		activePanel === 'outro' && axios.post('https://cherkizovo.fun/', {
 			user_id: fetchedUser.id,
 			name: fetchedUser.first_name + ' ' + fetchedUser.last_name,
 			avatar: fetchedUser.photo_200,

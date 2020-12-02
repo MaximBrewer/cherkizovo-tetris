@@ -180,9 +180,10 @@ table.game-board {
   border-radius: 0.5rem;
   padding: 1.125rem 0.5rem 1.25rem 0.5rem;
   text-align: left;
+  margin-bottom:1rem;
 }
 .Game .scores ol {
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 1.5rem;
   margin: 0;
 }
 .Game .scores ol li {

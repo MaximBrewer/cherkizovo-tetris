@@ -2,12 +2,12 @@ import "core-js/features/map";
 import "core-js/features/set";
 import React from "react";
 import ReactDOM from "react-dom";
+import Pusher from 'pusher-js';
 import bridge from "@vkontakte/vk-bridge";
 import App from "./App";
 
 import woopMp3 from './sounds/woop.mp3';
 import musicMp3 from './sounds/music.mp3';
-import Pusher from 'pusher-js';
 // import woopOgg from './sounds/woop.ogg';
 
 // Init VK  Mini App

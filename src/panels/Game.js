@@ -81,7 +81,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 											</div>
 										</Div>
 										<Div style={{ width: "32%", justifyContent: "center", padding: "0 1rem 0 2rem" }}>
-											<Div className={`scores`}>
+											<Div className={`score`}>
 												<p>Ваш счет:</p>
 												<p className={`numbers`}>
 													{pad(ScoreStore.getPoints()).map((item, index) => (
@@ -89,7 +89,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 													))}
 												</p>
 											</Div>
-											<Div>
+											<Div className={`scores`}>
 												<p>Лучшие игроки</p>
 												<ol>
 													<li>Михаил: Счет 678 800</li>

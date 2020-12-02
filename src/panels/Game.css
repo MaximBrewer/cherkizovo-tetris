@@ -192,14 +192,14 @@ table.game-board {
 }
 .Game .control-button {
   width: 20%;
+  border-radius: 50%;
+  background: #7B0708;
+  border: 2px solid #FFFFFF;
 }
 .Game .control-button > div {
   padding-top: 100%;
   height: 0;
   position: relative;
-  border-radius: 50%;
-  background: #7B0708;
-  border: 2px solid #FFFFFF;
 }
 .Game .control-button > div > * {
   position: absolute;

@@ -102,6 +102,18 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 	}
 
 	PieceStore.on(events.PLAYER_LOST, () => {
+		console.log(fetchedUser)
+		fetch("https://cherkizovo.fun", {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				score: ScoreStore.getPoints()
+			})
+		})
+			.then(res => { })
+			.catch(err => { })
 		go(route);
 	});
 

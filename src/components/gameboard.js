@@ -38,15 +38,15 @@ const watchKeys = (e) => {
   }
   switch (e.keyCode) {
     case 32:
-      AppActions.hardDrop
+      AppActions.hardDrop()
     case 37:
-      AppActions.moveLeft
+      AppActions.moveLeft()
     case 38:
-      AppActions.flipClockwise
+      AppActions.flipClockwise()
     case 39:
-      AppActions.moveRight
+      AppActions.moveRight()
     case 40:
-      AppActions.moveDown
+      AppActions.moveDown()
       e.preventDefault();
       e.stopPropogation();
       break;

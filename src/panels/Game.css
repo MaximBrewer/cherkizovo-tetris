@@ -203,7 +203,28 @@ table.game-board {
 }
 .Game .control-button > div > * {
   position: absolute;
-  top: 20%;
-  left: 20%;
+}
+.Game .control-button:nth-child(1) > div > * {
+  position: absolute;
+  top: 16%;
+  left: 18%;
+  width: 60%;
+}
+.Game .control-button:nth-child(2) > div > * {
+  position: absolute;
+  top: 16%;
+  left: 18%;
+  width: 60%;
+}
+.Game .control-button:nth-child(3) > div > * {
+  position: absolute;
+  top: 16%;
+  left: 18%;
+  width: 60%;
+}
+.Game .control-button:nth-child(4) > div > * {
+  position: absolute;
+  top: 16%;
+  left: 22%;
   width: 60%;
 }

@@ -28,7 +28,8 @@ var pusher = new Pusher('527099ad7df4062c0694', {
 
 var channel = pusher.subscribe('cherkizovo');
 channel.bind('refresh', function (data) {
-  alert(JSON.stringify(data));
+  console.log('pusher')
+  console.log(JSON.stringify(data))
 });
 
 ReactDOM.render(<App />, document.getElementById("root"));

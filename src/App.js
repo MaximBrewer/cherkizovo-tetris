@@ -48,7 +48,7 @@ const App = () => {
 		async function fetchData() {
 			const platform = await bridge.send('VKWebAppGetClientVersion');
 			setPlatform(platform);
-			if (platform && platform.platform == 'web' && bridge.supports("VKWebAppResizeWindow")) {
+			if (fetchedPlatform && fetchedPlatform.platform == 'web' && bridge.supports("VKWebAppResizeWindow")) {
 				bridge.send("VKWebAppResizeWindow", { "width": 800, "height": 568 });
 			}
 			const user = await bridge.send('VKWebAppGetUserInfo');
@@ -101,7 +101,7 @@ const App = () => {
 				fetchedUser={fetchedUser}
 				fetchedState={fetchedState}
 				go={go}
-				web={platform && platform.platform == 'web'}
+				web={fetchedPlatform && fetchedPlatform.platform == 'web'}
 				route={ROUTES.GAME}
 				snackbarError={snackbar}
 			/>
@@ -110,7 +110,7 @@ const App = () => {
 				fetchedUser={fetchedUser}
 				fetchedState={fetchedState}
 				go={go}
-				web={platform && platform.platform == 'web'}
+				web={fetchedPlatform && fetchedPlatform.platform == 'web'}
 				activePanel={activePanel}
 				route={ROUTES.OUTRO}
 				snackbarError={snackbar}
@@ -122,7 +122,7 @@ const App = () => {
 				fetchedState={fetchedState}
 				activePanel={activePanel}
 				go={go}
-				web={platform && platform.platform == 'web'}
+				web={fetchedPlatform && fetchedPlatform.platform == 'web'}
 				route={ROUTES.INTRO}
 				snackbarError={snackbar}
 			/>

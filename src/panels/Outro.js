@@ -3,6 +3,7 @@ import React, { Fragment, useEffect } from 'react';
 import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import ScoreStore from '../stores/score-store';
+import axios from "axios";
 
 import './Outro.css';
 import bg from '../img/intro-bg.jpg';
@@ -10,22 +11,19 @@ import logo from '../img/logo-white.png';
 
 const Outro = ({ id, route, fetchedUser, go, bridge, activePanel }) => {
 
-
 	useEffect(() => {
-		activePanel === 'outro' && fetch("https://cherkizovo.fun", {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify({
-				user_id: fetchedUser.id,
-				name: fetchedUser.first_name + ' ' + fetchedUser.last_name,
-				avatar: fetchedUser.photo_200,
-				score: ScoreStore.getPoints()
-			})
+		activePanel === 'outro' && axios.post('https://cherkizovo.fun', {
+			user_id: fetchedUser.id,
+			name: fetchedUser.first_name + ' ' + fetchedUser.last_name,
+			avatar: fetchedUser.photo_200,
+			score: ScoreStore.getPoints()
 		})
-			.then(res => { })
-			.catch(err => { })
+			.then(function (response) {
+				console.log(response);
+			})
+			.catch(function (error) {
+				console.log(error);
+			});
 	}, [activePanel])
 
 	const replay = () => {

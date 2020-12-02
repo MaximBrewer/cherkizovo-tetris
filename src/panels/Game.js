@@ -192,17 +192,17 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 												padding: "0.5rem 1.5rem"
 											}}>
 												<Div className={`control`} style={{ display: "flex", justifyContent: "space-between" }}>
-													<div onClick={moveLeft} style={{ display: "block", width: "25%" }}>
-														<Left style={{ display: "block", width: "100%" }} />
+													<div className={`control-button`} onClick={moveLeft}>
+														<div><Left style={{ display: "block", width: "100%" }} /></div>
 													</div>
-													<div onClick={rotate} style={{ display: "block", width: "25%" }}>
-														<Rotate style={{ display: "block", width: "100%" }} />
+													<div className={`control-button`} onClick={rotate}>
+														<div><Rotate style={{ display: "block", width: "100%" }} /></div>
 													</div>
-													<div onClick={drop} style={{ display: "block", width: "25%" }}>
-														<Drop style={{ display: "block", width: "100%" }} />
+													<div className={`control-button`} onClick={drop}>
+														<div><Drop style={{ display: "block", width: "100%" }} /></div>
 													</div>
-													<div onClick={moveRight} style={{ display: "block", width: "25%" }}>
-														<Right style={{ display: "block", width: "100%" }} />
+													<div className={`control-button`} onClick={moveRight}>
+														<div><Right style={{ display: "block", width: "100%" }} /></div>
 													</div>
 												</Div>
 											</Div>

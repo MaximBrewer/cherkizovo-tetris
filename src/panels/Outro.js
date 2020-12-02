@@ -8,7 +8,7 @@ import './Outro.css';
 import bg from '../img/intro-bg.jpg';
 import logo from '../img/logo-white.png';
 
-const Outro = ({ id, route, fetchedUser, go, bridge }) => {
+const Outro = ({ id, route, fetchedUser, go, bridge, activePanel }) => {
 
 
 	useEffect(() => {

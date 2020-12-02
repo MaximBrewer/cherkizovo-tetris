@@ -111,6 +111,7 @@ const App = () => {
 				bridge={bridge}
 				fetchedUser={fetchedUser}
 				fetchedState={fetchedState}
+				activePanel={activePanel}
 				go={go}
 				route={ROUTES.INTRO}
 				snackbarError={snackbar}

@@ -14,7 +14,7 @@ const Outro = ({ id, route, fetchedUser, go }) => {
 	}
 
 	const pad = (num) => {
-		return ('000000000' + num).substr(-6).split();
+		return (('000000000' + num).substr(-6)).split();
 	}
 	return (
 		<Panel id={id}>

@@ -10,8 +10,9 @@ import logo from '../img/logo-white.png';
 
 const Outro = ({ id, route, fetchedUser, go, bridge }) => {
 	const replay = () => {
-		console.log(`Я набрал ${ScoreStore.getPoints()} очков!`);
-		console.log(bridge.send("VKWebAppShowWallPostBox", {"message": `Я набрал ${ScoreStore.getPoints()} очков!`}));
+		console.log(1);
+		// console.log(`Я набрал ${ScoreStore.getPoints()} очков!`);
+		// console.log(bridge.send("VKWebAppShowWallPostBox", {"message": `Я набрал ${ScoreStore.getPoints()} очков!`}));
 	}
 
 	const pad = (num) => {
@@ -37,7 +38,7 @@ const Outro = ({ id, route, fetchedUser, go, bridge }) => {
 							<p>&nbsp;</p>
 							<p>
 								<button className={`btn-red`} onClick={() => go(route)}>Сыграть еще раз</button>&nbsp;&nbsp;
-								<button className={`btn-blue`} onClick={() => replay}>Рассказать друзьям</button>
+								<button className={`btn-blue`} onClick={() => replay()}>Рассказать друзьям</button>
 							</p>
 						</Div>
 					</Div>

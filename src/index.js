@@ -18,10 +18,10 @@ window.woop = () => {
   new Audio(woopMp3).play();
 }
 
-window.audioMusic = new Audio(musicMp3);
+window.audioMusic = new Audio({ src: musicMp3, loop: true });
 
 ReactDOM.render(<App />, document.getElementById("root"));
 if (false && process.env.NODE_ENV === "development") {
-  import("./eruda").then(({ default: eruda }) => {}); //runtime download
+  import("./eruda").then(({ default: eruda }) => { }); //runtime download
 }
 

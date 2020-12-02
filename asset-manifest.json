@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/MaximBrewer/cherkizovo-tetris/static/css/main.d3afd78a.chunk.css",
+    "main.js": "/MaximBrewer/cherkizovo-tetris/static/js/main.6051d689.chunk.js",
+    "main.js.map": "/MaximBrewer/cherkizovo-tetris/static/js/main.6051d689.chunk.js.map",
+    "runtime-main.js": "/MaximBrewer/cherkizovo-tetris/static/js/runtime-main.7cbe7ae5.js",
+    "runtime-main.js.map": "/MaximBrewer/cherkizovo-tetris/static/js/runtime-main.7cbe7ae5.js.map",
+    "static/css/2.cdee455b.chunk.css": "/MaximBrewer/cherkizovo-tetris/static/css/2.cdee455b.chunk.css",
+    "static/js/2.f67efb84.chunk.js": "/MaximBrewer/cherkizovo-tetris/static/js/2.f67efb84.chunk.js",
+    "static/js/2.f67efb84.chunk.js.map": "/MaximBrewer/cherkizovo-tetris/static/js/2.f67efb84.chunk.js.map",
+    "index.html": "/MaximBrewer/cherkizovo-tetris/index.html",
+    "precache-manifest.57bcc8c8072b17de7fd907935d3434ce.js": "/MaximBrewer/cherkizovo-tetris/precache-manifest.57bcc8c8072b17de7fd907935d3434ce.js",
+    "service-worker.js": "/MaximBrewer/cherkizovo-tetris/service-worker.js",
+    "static/css/2.cdee455b.chunk.css.map": "/MaximBrewer/cherkizovo-tetris/static/css/2.cdee455b.chunk.css.map",
+    "static/css/main.d3afd78a.chunk.css.map": "/MaximBrewer/cherkizovo-tetris/static/css/main.d3afd78a.chunk.css.map",
+    "static/js/2.f67efb84.chunk.js.LICENSE.txt": "/MaximBrewer/cherkizovo-tetris/static/js/2.f67efb84.chunk.js.LICENSE.txt",
+    "static/media/canvas-bg.png": "/MaximBrewer/cherkizovo-tetris/static/media/canvas-bg.06e2c93f.png",
+    "static/media/game-bg.jpg": "/MaximBrewer/cherkizovo-tetris/static/media/game-bg.1a5dfd38.jpg",
+    "static/media/intro-bg.jpg": "/MaximBrewer/cherkizovo-tetris/static/media/intro-bg.e4f61210.jpg",
+    "static/media/logo-white.png": "/MaximBrewer/cherkizovo-tetris/static/media/logo-white.19fa04fb.png",
+    "static/media/music.mp3": "/MaximBrewer/cherkizovo-tetris/static/media/music.18ca30f9.mp3",
+    "static/media/woop.mp3": "/MaximBrewer/cherkizovo-tetris/static/media/woop.e3c35f09.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7cbe7ae5.js",
+    "static/css/2.cdee455b.chunk.css",
+    "static/js/2.f67efb84.chunk.js",
+    "static/css/main.d3afd78a.chunk.css",
+    "static/js/main.6051d689.chunk.js"
+  ]
+}

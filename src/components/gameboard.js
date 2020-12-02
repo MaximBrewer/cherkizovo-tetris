@@ -36,6 +36,23 @@ const watchKeys = (e) => {
   if (e.isComposing || e.keyCode === 229) {
     return;
   }
+  switch (e.keyCode) {
+    case 32:
+      AppActions.hardDrop
+    case 37:
+      AppActions.moveLeft
+    case 38:
+      AppActions.flipClockwise
+    case 39:
+      AppActions.moveRight
+    case 40:
+      AppActions.moveDown
+      e.preventDefault();
+      e.stopPropogation();
+      break;
+    default:
+      break;
+  }
   console.log(e.keyCode);
   // Object.keys(keyboardMap).forEach((k) => {
   //   if(e.)

@@ -15,7 +15,7 @@ const Outro = ({ id, route, fetchedUser, go }) => {
 
 	const pad = (num) => {
 		let str = ('000000000' + num).substr(-6);
-		console.log(str);
+		console.log(typeof str);
 		let arr = str.split();
 		console.log(arr);
 		return arr;

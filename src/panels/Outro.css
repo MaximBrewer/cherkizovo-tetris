@@ -1,11 +1,11 @@
-.Outro *{
+.Outro * {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .Outro {
   display: block;
   width: 800px;
-  height:568px;
+  height: 568px;
   margin: 0;
   box-sizing: border-box;
   background-size: contain;
@@ -28,4 +28,16 @@
 .Outro p {
   margin: 0 0 0.5rem 0;
   font-size: 0.875rem;
+}
+.Outro p.numbers {
+  display: flex;
+  justify-content: center;
+}
+.Outro p.numbers span {
+  display: block;
+  margin: 0.1rem;
+  background: #aa2223;
+  border-radius: 0.4rem;
+  line-height: 3rem;
+  font-size: 3.5rem;
 }

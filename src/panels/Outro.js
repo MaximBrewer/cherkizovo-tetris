@@ -14,7 +14,11 @@ const Outro = ({ id, route, fetchedUser, go }) => {
 	}
 
 	const pad = (num) => {
-		return (('000000000' + num).substr(-6)).split();
+		let str = ('000000000' + num).substr(-6);
+		console.log(str);
+		let arr = str.split();
+		console.log(arr);
+		return arr;
 	}
 	return (
 		<Panel id={id}>

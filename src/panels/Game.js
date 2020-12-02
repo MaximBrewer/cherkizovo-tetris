@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
 import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
-import { Left, Right, Rotate } from '../Icons'
+import { Left, Right, Rotate, Drop } from '../Icons'
 import Tetris from '../components/tetris';
 import AppActions from '../actions/app-actions';
 import PieceStore from '../stores/piece-store';
@@ -16,6 +16,10 @@ const { events } = AppConstants;
 
 const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 
+	const pad = (num) => {
+		return ('000000000' + num).substr(-6).split('');
+	}
+
 	const moveLeft = (e) => {
 		e.preventDefault();
 		AppActions.moveLeft()
@@ -28,6 +32,10 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 	const rotate = (e) => {
 		e.preventDefault();
 		AppActions.flipClockwise()
+	}
+	const drop = (e) => {
+		e.preventDefault();
+		AppActions.hardDrop()
 	}
 
 	PieceStore.on(events.PLAYER_LOST, () => {
@@ -71,10 +79,36 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 												</div>
 											</div>
 										</Div>
-										<Div style={{ width: "32%", justifyContent: "center", alignItems: "center", padding: "0 1rem 0 2rem" }}>
+										<Div style={{ width: "32%", justifyContent: "center", padding: "0 1rem 0 2rem" }}>
 											<Div className={`scores`}>
-												<p>Очков: {points}</p>
-												<p>Линий: {linesCleared}</p>
+												<p>Ваш счет:</p>
+												<p className={`numbers`}>
+													{pad(ScoreStore.getPoints()).map((item, index) => (
+														<span key={index}>{item}</span>
+													))}
+												</p>
+											</Div>
+											<Div>
+												<p>Лучшие игроки</p>
+												<ol>
+													<li>Михаил: Счет 678 800</li>
+													<li>Михаил: Счет 678 800</li>
+													<li>Михаил: Счет 678 800</li>
+													<li>Михаил: Счет 678 800</li>
+													<li>Михаил: Счет 678 800</li>
+													<li>Михаил: Счет 678 800</li>
+													<li>Михаил: Счет 678 800</li>
+													<li>Михаил: Счет 678 800</li>
+													<li>Михаил: Счет 678 800</li>
+													<li>Михаил: Счет 678 800</li>
+													<li>Михаил: Счет 678 800</li>
+													<li>Михаил: Счет 678 800</li>
+													<li>Михаил: Счет 678 800</li>
+													<li>Михаил: Счет 678 800</li>
+													<li>Михаил: Счет 678 800</li>
+													<li>Михаил: Счет 678 800</li>
+													<li>Михаил: Счет 678 800</li>
+												</ol>
 											</Div>
 											<Div style={{
 												background: "#AA2223",
@@ -90,6 +124,9 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 													</div>
 													<div onClick={rotate} style={{ display: "block", width: "25%" }}>
 														<Rotate style={{ display: "block", width: "100%" }} />
+													</div>
+													<div onClick={drop} style={{ display: "block", width: "25%" }}>
+														<Drop style={{ display: "block", width: "100%" }} />
 													</div>
 													<div onClick={moveRight} style={{ display: "block", width: "25%" }}>
 														<Right style={{ display: "block", width: "100%" }} />

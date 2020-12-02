@@ -29,3 +29,18 @@
   margin: 0 0 0.5rem 0;
   font-size: 0.875rem;
 }
+.Intro p.numbers {
+  display: flex;
+  justify-content: center;
+}
+.Intro p.numbers span {
+  color: white;
+  display: block;
+  margin: 0.2rem;
+  background: #aa2223;
+  border-radius: 0.4rem;
+  line-height: 3rem;
+  font-size: 3rem;
+  padding: 0.5rem 0.3rem;
+  font-weight: bold;
+}

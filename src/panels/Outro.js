@@ -1,5 +1,5 @@
 
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import ScoreStore from '../stores/score-store';
@@ -9,12 +9,27 @@ import bg from '../img/intro-bg.jpg';
 import logo from '../img/logo-white.png';
 
 const Outro = ({ id, route, fetchedUser, go, bridge }) => {
+
+
+	useEffect(() => {
+		activePanel === 'outro' && fetch("https://cherkizovo.fun", {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				user_id: fetchedUser.id,
+				name: fetchedUser.first_name + ' ' + fetchedUser.last_name,
+				avatar: fetchedUser.photo_200,
+				score: ScoreStore.getPoints()
+			})
+		})
+			.then(res => { })
+			.catch(err => { })
+	}, [activePanel])
+
 	const replay = () => {
 		bridge.send("VKWebAppShare");
-		// console.log(bridge.send("VKWebAppShowWallPostBox", {
-		// 	message: `Я набрал ${ScoreStore.getPoints()} очков!`,
-		// 	attachments: "photo100172_166443618,photo-1_265827614"
-		// }));
 	}
 
 	const pad = (num) => {

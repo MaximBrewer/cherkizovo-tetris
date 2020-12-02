@@ -126,7 +126,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 								return (
 									<Div style={{ display: "flex", justifyContent: "center" }}>
 										<Div style={{ width: "32%", justifyContent: "center" }}>1</Div>
-										<Div style={{ width: "36%", justifyContent: "center" }}>
+										<Div style={{ width: "38%", justifyContent: "center" }}>
 											<div style={{
 												backgroundPosition: "center",
 												backgroundSize: "contain",
@@ -139,7 +139,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 												</div>
 											</div>
 										</Div>
-										<Div style={{ width: "32%", justifyContent: "center", padding: "0 1rem 0 2rem" }}>
+										<Div style={{ width: "30%", justifyContent: "center", padding: "0 1rem 0 2rem" }}>
 											<Div className={`score`}>
 												<p>Ваш счет:</p>
 												<p className={`numbers`}>

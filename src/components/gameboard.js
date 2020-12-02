@@ -16,11 +16,11 @@ const keyboardMap = {
   // x: AppActions.moveDown,
   z: AppActions.moveLeft,
   c: AppActions.moveRight,
-  x: AppActions.hardDrop,
+  space: AppActions.hardDrop,
   // z: AppActions.flipCounterclockwise,
   // x: AppActions.flipClockwise,
-  d: AppActions.flipClockwise,
-  s: AppActions.flipClockwise,
+  x: AppActions.flipClockwise,
+  // s: AppActions.flipClockwise,
   // p: () => {
   //   if (GameStore.getCurrentState() === states.PLAYING) {
   //     AppActions.pause();

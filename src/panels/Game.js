@@ -14,6 +14,9 @@ import canavsBg from '../img/canvas-bg.png';
 import ScoreStore from '../stores/score-store';
 import { Scrollbars } from 'react-custom-scrollbars-with-mobile';
 
+const axios = require('axios');
+
+
 const { events } = AppConstants;
 
 const Game = ({ id, go, route, fetchedUser, activePanel }) => {
@@ -104,6 +107,19 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 	PieceStore.on(events.PLAYER_LOST, () => {
 		go(route);
 	});
+
+	const [scores, setScores] = useState([]);
+
+	useEffect(() => {
+		activePanel === 'outro' && axios.post('https://cherkizovo.fun/api/get')
+			.then(function (response) {
+				console.log(response.data)
+				setScores(response.data)
+			})
+			.catch(function (error) {
+				// console.log(error);
+			});
+	}, [])
 
 	useEffect(() => {
 		activePanel === 'game' && GameStore.forceStart()

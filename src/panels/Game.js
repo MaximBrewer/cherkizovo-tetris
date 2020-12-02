@@ -89,8 +89,8 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 													))}
 												</p>
 											</Div>
+											<p>Лучшие игроки</p>
 											<Div className={`scores`}>
-												<p>Лучшие игроки</p>
 												<ol>
 													<li>Михаил: Счет <strong>678 800</strong></li>
 													<li>Михаил: Счет <strong>678 800</strong></li>

@@ -46,10 +46,10 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 
 	function renderTrackVertical({ style, ...props }) {
 		const trackStyle = {
-			width: "16px",
-			padding: "4px",
-			borderRadius: "8px",
-			backgroundColor: "#E54C2E",
+			width: "4px",
+			padding: "0px",
+			borderRadius: "2px",
+			backgroundColor: "#ffffff",
 			position: "absolute",
 			right: 0,
 			bottom: 0,
@@ -64,10 +64,10 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 
 	function renderThumbVertical({ style, ...props }) {
 		const thumbStyle = {
-			width: "8px",
-			height: "102px",
-			borderRadius: "4px",
-			backgroundColor: "#ffffff",
+			width: "4px",
+			height: "10px",
+			borderRadius: "2px",
+			backgroundColor: "rgba(33, 80, 245, 0.47)",
 		};
 		return (
 			<div

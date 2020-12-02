@@ -2,7 +2,6 @@ import "core-js/features/map";
 import "core-js/features/set";
 import React from "react";
 import ReactDOM from "react-dom";
-import Pusher from 'pusher-js';
 import bridge from "@vkontakte/vk-bridge";
 import App from "./App";
 
@@ -19,20 +18,6 @@ window.woop = () => {
 
 window.audioMusic = new Audio(musicMp3);
 window.audioMusic.loop = true;
-
-Pusher.logToConsole = true;
-
-const pusher = new Pusher('527099ad7df4062c0694', {
-  cluster: 'eu'
-});
-
-const channel = pusher.subscribe('cherkizovo');
-
-channel.bind('refresh', function (data) {
-  console.log('pusher')
-  console.log(JSON.stringify(data))
-});
-console.log(channel)
 
 ReactDOM.render(<App />, document.getElementById("root"));
 if (false && process.env.NODE_ENV === "development") {

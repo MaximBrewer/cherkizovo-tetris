@@ -5,6 +5,7 @@ import { Left, Right, Rotate, Drop, Sound } from '../Icons'
 import Tetris from '../components/tetris';
 import AppActions from '../actions/app-actions';
 import PieceStore from '../stores/piece-store';
+import Pusher from 'pusher-js';
 import AppConstants from '../constants/app-constants';
 import GameStore from '../stores/game-store'
 import BoardStore from '../stores/board-store'
@@ -16,6 +17,13 @@ import { Scrollbars } from 'react-custom-scrollbars-with-mobile';
 
 const axios = require('axios');
 
+Pusher.logToConsole = true;
+
+const pusher = new Pusher('527099ad7df4062c0694', {
+  cluster: 'eu'
+});
+
+const channel = pusher.subscribe('cherkizovo');
 
 const { events } = AppConstants;
 

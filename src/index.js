@@ -19,8 +19,19 @@ window.woop = () => {
 window.audioMusic = new Audio(musicMp3);
 window.audioMusic.loop = true;
 
+Pusher.logToConsole = true;
+
+var pusher = new Pusher('527099ad7df4062c0694', {
+  cluster: 'eu'
+});
+
+var channel = pusher.subscribe('cherkizovo');
+channel.bind('refresh', function (data) {
+  alert(JSON.stringify(data));
+});
+
 ReactDOM.render(<App />, document.getElementById("root"));
 if (false && process.env.NODE_ENV === "development") {
-  import("./eruda").then(({ default: eruda }) => {}); //runtime download
+  import("./eruda").then(({ default: eruda }) => { }); //runtime download
 }
 

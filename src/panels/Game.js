@@ -150,7 +150,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 											</Div>
 											<p>Лучшие игроки</p>
 											<Div className={`scores`}>
-												<Scrollbars style={{ height: 600 }}
+												<Scrollbars style={{ height: 128 }}
 													renderView={renderView}
 													renderThumbHorizontal={renderThumbHorizontal}
 													renderThumbVertical={renderThumbVertical}

@@ -213,7 +213,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 													<div style={{ paddingRight: "10px" }}>
 														<ol>
 															{scores.map((item, index) => (
-																<li>{item.name}: Счет <strong>{number_format(item.score, 0, '.', ' ')}</strong></li>
+																<li>{item.name}: <strong>{number_format(item.score, 0, '.', ' ')}</strong></li>
 															))}
 														</ol>
 													</div>

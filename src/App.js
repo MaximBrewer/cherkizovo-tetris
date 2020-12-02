@@ -30,14 +30,12 @@ const App = () => {
 	const [fetchedState, setFetchedState] = useState(null);
 	const [snackbar, setSnackbar] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
-	const [fetchedPlatform, setPlatform] = useState(null);
-	const [orientation, setOrientation] = useState(window.orientation);
+
 
 	useEffect(() => {
-		window.addEventListener("orientationchange", function () {
-			setOrientation(window.orientation)
-			console.log(orientation)
-		});
+		if (bridge.supports("VKWebAppResizeWindow")) {
+			bridge.send("VKWebAppResizeWindow", { "width": 800, "height": 568 });
+		}
 		bridge.subscribe(({ detail: { type, data } }) => {
 			if (type === 'VKWebAppUpdateConfig') {
 				const schemeAttribute = document.createAttribute('scheme');
@@ -46,11 +44,6 @@ const App = () => {
 			}
 		});
 		async function fetchData() {
-			const platform = await bridge.send('VKWebAppGetClientVersion');
-			setPlatform(platform);
-			if (fetchedPlatform && fetchedPlatform.platform == 'web' && bridge.supports("VKWebAppResizeWindow")) {
-				bridge.send("VKWebAppResizeWindow", { "width": 800, "height": 568 });
-			}
 			const user = await bridge.send('VKWebAppGetUserInfo');
 			const sheetState = await bridge.send('VKWebAppStorageGet', { keys: [STORAGE_KEYS.STATE, STORAGE_KEYS.STATUS] });
 			if (Array.isArray(sheetState.keys)) {
@@ -101,7 +94,6 @@ const App = () => {
 				fetchedUser={fetchedUser}
 				fetchedState={fetchedState}
 				go={go}
-				web={!fetchedPlatform || fetchedPlatform.platform == 'web'}
 				route={ROUTES.GAME}
 				snackbarError={snackbar}
 			/>
@@ -110,7 +102,6 @@ const App = () => {
 				fetchedUser={fetchedUser}
 				fetchedState={fetchedState}
 				go={go}
-				web={!fetchedPlatform || fetchedPlatform.platform == 'web'}
 				activePanel={activePanel}
 				route={ROUTES.OUTRO}
 				snackbarError={snackbar}
@@ -122,7 +113,6 @@ const App = () => {
 				fetchedState={fetchedState}
 				activePanel={activePanel}
 				go={go}
-				web={!fetchedPlatform || fetchedPlatform.platform == 'web'}
 				route={ROUTES.INTRO}
 				snackbarError={snackbar}
 			/>

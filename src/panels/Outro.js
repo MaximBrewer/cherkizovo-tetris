@@ -15,7 +15,7 @@ const Outro = ({ id, route, fetchedUser, go, bridge, activePanel }) => {
 	useEffect(() => {
 		activePanel === 'outro' && axios.post('https://cherkizovo.fun/api/store', {
 			user_id: fetchedUser.id,
-			name: fetchedUser.first_name + ' ' + fetchedUser.last_name,
+			name: fetchedUser.first_name,
 			avatar: fetchedUser.photo_200,
 			score: ScoreStore.getPoints()
 		})

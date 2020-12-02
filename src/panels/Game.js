@@ -124,7 +124,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 						<Tetris>
 							{({ HeldPiece, Gameboard, PieceQueue, points, linesCleared }) => {
 								return (
-									<Div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+									<Div style={{ display: "flex", justifyContent: "center" }}>
 										<Div style={{ width: "32%", justifyContent: "center", alignItems: "center" }}>1</Div>
 										<Div style={{ width: "36%", justifyContent: "center", alignItems: "center" }}>
 											<div style={{

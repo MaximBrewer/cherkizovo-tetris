@@ -31,9 +31,13 @@ const App = () => {
 	const [snackbar, setSnackbar] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
 	const [fetchedPlatform, setPlatform] = useState(null);
-
+	const [orientation, setOrientation] = useState(window.orientation);
 
 	useEffect(() => {
+		window.addEventListener("orientationchange", function () {
+			setOrientation(window.orientation)
+			console.log(orientation)
+		});
 		bridge.subscribe(({ detail: { type, data } }) => {
 			if (type === 'VKWebAppUpdateConfig') {
 				const schemeAttribute = document.createAttribute('scheme');
@@ -97,6 +101,7 @@ const App = () => {
 				fetchedUser={fetchedUser}
 				fetchedState={fetchedState}
 				go={go}
+				web={platform && platform.platform == 'web'}
 				route={ROUTES.GAME}
 				snackbarError={snackbar}
 			/>
@@ -105,6 +110,7 @@ const App = () => {
 				fetchedUser={fetchedUser}
 				fetchedState={fetchedState}
 				go={go}
+				web={platform && platform.platform == 'web'}
 				activePanel={activePanel}
 				route={ROUTES.OUTRO}
 				snackbarError={snackbar}
@@ -116,6 +122,7 @@ const App = () => {
 				fetchedState={fetchedState}
 				activePanel={activePanel}
 				go={go}
+				web={platform && platform.platform == 'web'}
 				route={ROUTES.INTRO}
 				snackbarError={snackbar}
 			/>

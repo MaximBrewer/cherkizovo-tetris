@@ -32,35 +32,22 @@ const keyboardMap = {
   // shift: AppActions.hold
 };
 
-const toUp = (e) => {
-  e.preventDefault();
-  e.stopPropogation();
-  keyboardMap.up
-}
-
-const toDown = (e) => {
-  e.preventDefault();
-  e.stopPropogation();
-  keyboardMap.space
-}
-
-const toRight = (e) => {
-  e.preventDefault();
-  e.stopPropogation();
-  keyboardMap.right
-}
-
-const toLeft = (e) => {
-  e.preventDefault();
-  e.stopPropogation();
-  keyboardMap.left
+const watchKeys = (e) => {
+  if (e.isComposing || e.keyCode === 229) {
+    return;
+  }
+  console.log(e.keyCode);
+  // Object.keys(keyboardMap).forEach((k) => {
+  //   if(e.)
+  // })
 }
 
 function addKeyboardEvents() {
-  key("up", toUp);
-  key("down", toDown);
-  key("right", toRight);
-  key("left", toLeft);
+  window.addEventListener('keydown', watchKeys)
+  // key("up", toUp);
+  // key("down", toDown);
+  // key("right", toRight);
+  // key("left", toLeft);
   // Object.keys(keyboardMap).forEach((k) => {
   //   // if (k === 'shift') {
   //   //   DetectShift.bind(keyboardMap[k]);
@@ -71,10 +58,11 @@ function addKeyboardEvents() {
   // });
 }
 function removeKeyboardEvents() {
-  key.unbind("up");
-  key.unbind("down");
-  key.unbind("left");
-  key.unbind("right");
+  window.removeEventListener('keydown', watchKeys)
+  // key.unbind("up");
+  // key.unbind("down");
+  // key.unbind("left");
+  // key.unbind("right");
   // Object.keys(keyboardMap).forEach((k) => {
   //   // if (k === 'shift') {
   //   //   DetectShift.unbind(keyboardMap[k]);

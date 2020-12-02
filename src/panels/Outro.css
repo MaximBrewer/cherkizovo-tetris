@@ -34,6 +34,7 @@
   justify-content: center;
 }
 .Outro p.numbers span {
+  color: white;
   display: block;
   margin: 0.1rem;
   background: #aa2223;

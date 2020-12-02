@@ -4,8 +4,7 @@ import AppDispatcher from '../dispatchers/app-dispatcher';
 const { actions } = AppConstants;
 
 const AppActions = {
-  moveDown(e, piece) {
-    e.stopPropogation()
+  moveDown(piece) {
     AppDispatcher.handleViewAction({
       actionType: actions.MOVE_DOWN,
       piece

@@ -13,13 +13,13 @@ function gameBoard() {
 }
 
 const keyboardMap = {
-  down: AppActions.moveDown,
-  left: AppActions.moveLeft,
-  right: AppActions.moveRight,
-  space: AppActions.hardDrop,
-  z: AppActions.flipCounterclockwise,
-  x: AppActions.flipClockwise,
-  up: AppActions.flipClockwise,
+  down: (e) => { e.stopPropagation; AppActions.moveDown },
+  left: (e) => { e.stopPropagation; AppActions.moveLeft },
+  right: (e) => { e.stopPropagation; AppActions.moveRight },
+  space: (e) => { e.stopPropagation; AppActions.hardDrop },
+  z: (e) => { e.stopPropagation; AppActions.flipCounterclockwise },
+  x: (e) => { e.stopPropagation; AppActions.flipClockwise },
+  up: (e) => { e.stopPropagation; AppActions.flipClockwise },
   // p: () => {
   //   if (GameStore.getCurrentState() === states.PLAYING) {
   //     AppActions.pause();
@@ -36,7 +36,7 @@ function addKeyboardEvents() {
     // if (k === 'shift') {
     //   DetectShift.bind(keyboardMap[k]);
     // } else {
-      key(k, keyboardMap[k]);
+    key(k, keyboardMap[k]);
     // }
   });
 }
@@ -45,7 +45,7 @@ function removeKeyboardEvents() {
     // if (k === 'shift') {
     //   DetectShift.unbind(keyboardMap[k]);
     // } else {
-      key.unbind(k);
+    key.unbind(k);
     // }
   });
 }

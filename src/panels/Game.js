@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
 import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
-import { Left, Right, Rotate, Drop } from '../Icons'
+import { Left, Right, Rotate, Drop, Sound } from '../Icons'
 import Tetris from '../components/tetris';
 import AppActions from '../actions/app-actions';
 import PieceStore from '../stores/piece-store';
@@ -19,6 +19,9 @@ const { events } = AppConstants;
 const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 
 
+	const switchSound = () => {
+		window.audioMusic.volume == 1 ? window.audioMusic.volume = 0 : window.audioMusic.volume = 1;
+	}
 
 	function renderView({ style, ...props }) {
 		const viewStyle = {
@@ -206,6 +209,9 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 													</div>
 												</Div>
 											</Div>
+											<div className={`control-button sound`} onClick={switchSound}>
+												<div><Sound style={{ display: "block", width: "100%" }} /></div>
+											</div>
 										</Div>
 									</Div>
 								);

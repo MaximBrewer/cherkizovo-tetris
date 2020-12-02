@@ -22,7 +22,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 
 	function renderView({ style, ...props }) {
 		const viewStyle = {
-			paddingRight: 26
+			paddingRight: 14
 		};
 		return (
 			<div

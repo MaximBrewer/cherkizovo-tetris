@@ -34,11 +34,6 @@ const App = () => {
 
 
 	useEffect(() => {
-		const platform = await bridge.send('VKWebAppGetClientVersion');
-		setPlatform(platform);
-		if (platform && platform.platform == 'web' && bridge.supports("VKWebAppResizeWindow")) {
-			bridge.send("VKWebAppResizeWindow", { "width": 800, "height": 568 });
-		}
 		bridge.subscribe(({ detail: { type, data } }) => {
 			if (type === 'VKWebAppUpdateConfig') {
 				const schemeAttribute = document.createAttribute('scheme');
@@ -47,6 +42,11 @@ const App = () => {
 			}
 		});
 		async function fetchData() {
+			const platform = await bridge.send('VKWebAppGetClientVersion');
+			setPlatform(platform);
+			if (platform && platform.platform == 'web' && bridge.supports("VKWebAppResizeWindow")) {
+				bridge.send("VKWebAppResizeWindow", { "width": 800, "height": 568 });
+			}
 			const user = await bridge.send('VKWebAppGetUserInfo');
 			const sheetState = await bridge.send('VKWebAppStorageGet', { keys: [STORAGE_KEYS.STATE, STORAGE_KEYS.STATUS] });
 			if (Array.isArray(sheetState.keys)) {

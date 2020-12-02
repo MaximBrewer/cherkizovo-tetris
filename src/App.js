@@ -101,7 +101,7 @@ const App = () => {
 				fetchedUser={fetchedUser}
 				fetchedState={fetchedState}
 				go={go}
-				web={fetchedPlatform && fetchedPlatform.platform == 'web'}
+				web={!fetchedPlatform || fetchedPlatform.platform == 'web'}
 				route={ROUTES.GAME}
 				snackbarError={snackbar}
 			/>
@@ -110,7 +110,7 @@ const App = () => {
 				fetchedUser={fetchedUser}
 				fetchedState={fetchedState}
 				go={go}
-				web={fetchedPlatform && fetchedPlatform.platform == 'web'}
+				web={!fetchedPlatform || fetchedPlatform.platform == 'web'}
 				activePanel={activePanel}
 				route={ROUTES.OUTRO}
 				snackbarError={snackbar}
@@ -122,7 +122,7 @@ const App = () => {
 				fetchedState={fetchedState}
 				activePanel={activePanel}
 				go={go}
-				web={fetchedPlatform && fetchedPlatform.platform == 'web'}
+				web={!fetchedPlatform || fetchedPlatform.platform == 'web'}
 				route={ROUTES.INTRO}
 				snackbarError={snackbar}
 			/>

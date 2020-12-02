@@ -108,6 +108,7 @@ const App = () => {
 			/>
 			<Outro
 				id={ROUTES.OUTRO}
+				bridge={bridge}
 				fetchedUser={fetchedUser}
 				fetchedState={fetchedState}
 				go={go}

@@ -36,7 +36,7 @@ function addKeyboardEvents() {
     // if (k === 'shift') {
     //   DetectShift.bind(keyboardMap[k]);
     // } else {
-      key(k, (e) => {e.stopPropagation; return keyboardMap[k]});
+      key(k, (e) => {e.stopPropagation(); return keyboardMap[k]});
     // }
   });
 }

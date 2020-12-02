@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/cherkizovo-tetris/static/css/main.d3afd78a.chunk.css",
-    "main.js": "/cherkizovo-tetris/static/js/main.29acb7e3.chunk.js",
-    "main.js.map": "/cherkizovo-tetris/static/js/main.29acb7e3.chunk.js.map",
+    "main.js": "/cherkizovo-tetris/static/js/main.8bd19e0b.chunk.js",
+    "main.js.map": "/cherkizovo-tetris/static/js/main.8bd19e0b.chunk.js.map",
     "runtime-main.js": "/cherkizovo-tetris/static/js/runtime-main.6e8a90eb.js",
     "runtime-main.js.map": "/cherkizovo-tetris/static/js/runtime-main.6e8a90eb.js.map",
     "static/css/2.cdee455b.chunk.css": "/cherkizovo-tetris/static/css/2.cdee455b.chunk.css",
-    "static/js/2.1468fc07.chunk.js": "/cherkizovo-tetris/static/js/2.1468fc07.chunk.js",
-    "static/js/2.1468fc07.chunk.js.map": "/cherkizovo-tetris/static/js/2.1468fc07.chunk.js.map",
+    "static/js/2.0c8ee6d1.chunk.js": "/cherkizovo-tetris/static/js/2.0c8ee6d1.chunk.js",
+    "static/js/2.0c8ee6d1.chunk.js.map": "/cherkizovo-tetris/static/js/2.0c8ee6d1.chunk.js.map",
     "index.html": "/cherkizovo-tetris/index.html",
-    "precache-manifest.dd3585a85edffc41565abd223861cecf.js": "/cherkizovo-tetris/precache-manifest.dd3585a85edffc41565abd223861cecf.js",
+    "precache-manifest.5fefd05511662d82b516768d7b3bf44a.js": "/cherkizovo-tetris/precache-manifest.5fefd05511662d82b516768d7b3bf44a.js",
     "service-worker.js": "/cherkizovo-tetris/service-worker.js",
     "static/css/2.cdee455b.chunk.css.map": "/cherkizovo-tetris/static/css/2.cdee455b.chunk.css.map",
     "static/css/main.d3afd78a.chunk.css.map": "/cherkizovo-tetris/static/css/main.d3afd78a.chunk.css.map",
-    "static/js/2.1468fc07.chunk.js.LICENSE.txt": "/cherkizovo-tetris/static/js/2.1468fc07.chunk.js.LICENSE.txt",
+    "static/js/2.0c8ee6d1.chunk.js.LICENSE.txt": "/cherkizovo-tetris/static/js/2.0c8ee6d1.chunk.js.LICENSE.txt",
     "static/media/canvas-bg.png": "/cherkizovo-tetris/static/media/canvas-bg.06e2c93f.png",
     "static/media/game-bg.jpg": "/cherkizovo-tetris/static/media/game-bg.1a5dfd38.jpg",
     "static/media/intro-bg.jpg": "/cherkizovo-tetris/static/media/intro-bg.e4f61210.jpg",
@@ -24,8 +24,8 @@
   "entrypoints": [
     "static/js/runtime-main.6e8a90eb.js",
     "static/css/2.cdee455b.chunk.css",
-    "static/js/2.1468fc07.chunk.js",
+    "static/js/2.0c8ee6d1.chunk.js",
     "static/css/main.d3afd78a.chunk.css",
-    "static/js/main.29acb7e3.chunk.js"
+    "static/js/main.8bd19e0b.chunk.js"
   ]
 }

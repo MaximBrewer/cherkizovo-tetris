@@ -30,7 +30,7 @@ export const Rotate = ({ style }) => {
 export const Drop = ({ style }) => {
     return (
         <svg width="30" height="39" viewBox="0 0 30 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="30" width="39" height="30" transform="rotate(90 30 0)" fill="url(#dropPattern0)" />
+            <rect width="39" height="30" transform="rotate(90 30 0)" fill="url(#dropPattern0)" />
             <defs>
                 <pattern id="dropPattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
                     <use xlinkHref="#dropImage0" transform="translate(-0.00983897) scale(0.00447227 0.00581395)" />

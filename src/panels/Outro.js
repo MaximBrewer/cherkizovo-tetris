@@ -10,7 +10,11 @@ import logo from '../img/logo-white.png';
 
 const Outro = ({ id, route, fetchedUser, go, bridge }) => {
 	const replay = () => {
-		console.log(bridge.send("VKWebAppShowWallPostBox", {"message": `Я набрал ${ScoreStore.getPoints()} очков!`}));
+		bridge.send("VKWebAppShare");
+		// console.log(bridge.send("VKWebAppShowWallPostBox", {
+		// 	message: `Я набрал ${ScoreStore.getPoints()} очков!`,
+		// 	attachments: "photo100172_166443618,photo-1_265827614"
+		// }));
 	}
 
 	const pad = (num) => {

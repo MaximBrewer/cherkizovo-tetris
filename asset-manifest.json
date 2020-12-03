@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/cherkizovo-tetris/static/css/main.5cf26864.chunk.css",
+    "main.css": "/cherkizovo-tetris/static/css/main.b161d58c.chunk.css",
     "main.js": "/cherkizovo-tetris/static/js/main.70bb2ce0.chunk.js",
     "main.js.map": "/cherkizovo-tetris/static/js/main.70bb2ce0.chunk.js.map",
     "runtime-main.js": "/cherkizovo-tetris/static/js/runtime-main.6e8a90eb.js",
@@ -9,10 +9,10 @@
     "static/js/2.bfdc2261.chunk.js": "/cherkizovo-tetris/static/js/2.bfdc2261.chunk.js",
     "static/js/2.bfdc2261.chunk.js.map": "/cherkizovo-tetris/static/js/2.bfdc2261.chunk.js.map",
     "index.html": "/cherkizovo-tetris/index.html",
-    "precache-manifest.2110c1ed7936b0c237c0e413aa1c003b.js": "/cherkizovo-tetris/precache-manifest.2110c1ed7936b0c237c0e413aa1c003b.js",
+    "precache-manifest.39784acddc68166a37d856f54e050330.js": "/cherkizovo-tetris/precache-manifest.39784acddc68166a37d856f54e050330.js",
     "service-worker.js": "/cherkizovo-tetris/service-worker.js",
     "static/css/2.cdee455b.chunk.css.map": "/cherkizovo-tetris/static/css/2.cdee455b.chunk.css.map",
-    "static/css/main.5cf26864.chunk.css.map": "/cherkizovo-tetris/static/css/main.5cf26864.chunk.css.map",
+    "static/css/main.b161d58c.chunk.css.map": "/cherkizovo-tetris/static/css/main.b161d58c.chunk.css.map",
     "static/js/2.bfdc2261.chunk.js.LICENSE.txt": "/cherkizovo-tetris/static/js/2.bfdc2261.chunk.js.LICENSE.txt",
     "static/media/canvas-bg.png": "/cherkizovo-tetris/static/media/canvas-bg.06e2c93f.png",
     "static/media/galkin.png": "/cherkizovo-tetris/static/media/galkin.403f54d8.png",
@@ -27,7 +27,7 @@
     "static/js/runtime-main.6e8a90eb.js",
     "static/css/2.cdee455b.chunk.css",
     "static/js/2.bfdc2261.chunk.js",
-    "static/css/main.5cf26864.chunk.css",
+    "static/css/main.b161d58c.chunk.css",
     "static/js/main.70bb2ce0.chunk.js"
   ]
 }

@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/cherkizovo-tetris/static/css/main.d3afd78a.chunk.css",
-    "main.js": "/cherkizovo-tetris/static/js/main.d9aa2616.chunk.js",
-    "main.js.map": "/cherkizovo-tetris/static/js/main.d9aa2616.chunk.js.map",
+    "main.css": "/cherkizovo-tetris/static/css/main.cee8cdfd.chunk.css",
+    "main.js": "/cherkizovo-tetris/static/js/main.057b21bb.chunk.js",
+    "main.js.map": "/cherkizovo-tetris/static/js/main.057b21bb.chunk.js.map",
     "runtime-main.js": "/cherkizovo-tetris/static/js/runtime-main.6e8a90eb.js",
     "runtime-main.js.map": "/cherkizovo-tetris/static/js/runtime-main.6e8a90eb.js.map",
     "static/css/2.cdee455b.chunk.css": "/cherkizovo-tetris/static/css/2.cdee455b.chunk.css",
     "static/js/2.0c8ee6d1.chunk.js": "/cherkizovo-tetris/static/js/2.0c8ee6d1.chunk.js",
     "static/js/2.0c8ee6d1.chunk.js.map": "/cherkizovo-tetris/static/js/2.0c8ee6d1.chunk.js.map",
     "index.html": "/cherkizovo-tetris/index.html",
-    "precache-manifest.cbc3aa9e4f6bf51f5d01e444fdb8aad8.js": "/cherkizovo-tetris/precache-manifest.cbc3aa9e4f6bf51f5d01e444fdb8aad8.js",
+    "precache-manifest.822195d63642320d09c7a5dc3d33eff1.js": "/cherkizovo-tetris/precache-manifest.822195d63642320d09c7a5dc3d33eff1.js",
     "service-worker.js": "/cherkizovo-tetris/service-worker.js",
     "static/css/2.cdee455b.chunk.css.map": "/cherkizovo-tetris/static/css/2.cdee455b.chunk.css.map",
-    "static/css/main.d3afd78a.chunk.css.map": "/cherkizovo-tetris/static/css/main.d3afd78a.chunk.css.map",
+    "static/css/main.cee8cdfd.chunk.css.map": "/cherkizovo-tetris/static/css/main.cee8cdfd.chunk.css.map",
     "static/js/2.0c8ee6d1.chunk.js.LICENSE.txt": "/cherkizovo-tetris/static/js/2.0c8ee6d1.chunk.js.LICENSE.txt",
     "static/media/canvas-bg.png": "/cherkizovo-tetris/static/media/canvas-bg.06e2c93f.png",
     "static/media/game-bg.jpg": "/cherkizovo-tetris/static/media/game-bg.1a5dfd38.jpg",
@@ -25,7 +25,7 @@
     "static/js/runtime-main.6e8a90eb.js",
     "static/css/2.cdee455b.chunk.css",
     "static/js/2.0c8ee6d1.chunk.js",
-    "static/css/main.d3afd78a.chunk.css",
-    "static/js/main.d9aa2616.chunk.js"
+    "static/css/main.cee8cdfd.chunk.css",
+    "static/js/main.057b21bb.chunk.js"
   ]
 }

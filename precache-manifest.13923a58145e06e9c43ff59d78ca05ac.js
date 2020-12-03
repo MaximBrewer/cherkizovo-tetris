@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7b2d4022b4cee2549b08e58136dc52b8",
+    "revision": "509bd2f784ea67180113308e0580033e",
     "url": "/cherkizovo-tetris/index.html"
   },
   {
-    "revision": "84d07428856ebe930100",
+    "revision": "8264a88a9f2ae88e246a",
     "url": "/cherkizovo-tetris/static/css/2.cdee455b.chunk.css"
   },
   {
-    "revision": "4a2a6717a987d60c0660",
-    "url": "/cherkizovo-tetris/static/css/main.f5f23258.chunk.css"
+    "revision": "dccb4f06c3476189629c",
+    "url": "/cherkizovo-tetris/static/css/main.afec0496.chunk.css"
   },
   {
-    "revision": "84d07428856ebe930100",
-    "url": "/cherkizovo-tetris/static/js/2.bfdc2261.chunk.js"
+    "revision": "8264a88a9f2ae88e246a",
+    "url": "/cherkizovo-tetris/static/js/2.fcbe800e.chunk.js"
   },
   {
     "revision": "fa8476a28755c72e9a88d42d463763f3",
-    "url": "/cherkizovo-tetris/static/js/2.bfdc2261.chunk.js.LICENSE.txt"
+    "url": "/cherkizovo-tetris/static/js/2.fcbe800e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4a2a6717a987d60c0660",
-    "url": "/cherkizovo-tetris/static/js/main.9e4704a0.chunk.js"
+    "revision": "dccb4f06c3476189629c",
+    "url": "/cherkizovo-tetris/static/js/main.2ad07ddf.chunk.js"
   },
   {
     "revision": "d0d4b4ba5d723e4d1ced",

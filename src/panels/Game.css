@@ -249,7 +249,7 @@ table.game-board {
 .galkin-score {
   position: absolute;
   right: .5rem;
-  top: 5rem;
+  top: 7.5rem;
 }
 .galkin-score:before {
   content: "";

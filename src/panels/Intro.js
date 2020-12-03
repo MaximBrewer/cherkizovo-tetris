@@ -15,11 +15,10 @@ const Intro = ({ id, go, route, fetchedUser }) => {
 				<Fragment>
 					<Div className='Intro' style={{ textAlign: "center", backgroundImage: 'url(' + bg + ')', display: "flex", justifyContent: "center", alignItems: "center" }} >
 						<Div style={{ minHeight: "70%", color: "#ffffff" }}>
-							<h2>Новый год с</h2>
-							<h2><img src={logo} alt="" style={{ width: "12rem" }} /></h2>
+							<h3>Новый год с</h3>
+							<h3><img src={logo} alt="" style={{ width: "12rem" }} /></h3>
 							<h3>Миссия: <br />“Накрой праздничный стол с&nbsp;Черкизово!”</h3>
 							<p>Набери больше всех баллов и&nbsp;получи крутые призы!</p>
-							<p>&nbsp;</p>
 							<div style={{ display: "flex", alignItems: "center" }}>
 								<div>
 									<img src={galkin} alt="Максим Галкин" style={{ width: "12rem" }} />

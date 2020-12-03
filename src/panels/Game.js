@@ -56,8 +56,11 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 		return s.join(dec);
 	}
 
+	const [paused, setPaused] = useState(false);
+
 	const switchSound = () => {
-		window.audioMusic.volume == 1 ? window.audioMusic.volume = 0 : window.audioMusic.volume = 1;
+		window.audioMusic.paused ? window.audioMusic.play() : window.audioMusic.pause();
+		setPaused(window.audioMusic.paused)
 	}
 
 	function renderView({ style, ...props }) {
@@ -152,11 +155,18 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 			.catch(function (error) {
 				// console.log(error);
 			});
+		setPaused(window.audioMusic.paused)
 	}, [])
 
+
 	useEffect(() => {
-		activePanel === 'game' && GameStore.forceStart()
-		window.audioMusic.play()
+		if (activePanel === 'game') {
+			GameStore.forceStart()
+			window.audioMusic.play()
+		} else {
+			window.audioMusic.pause()
+		}
+		setPaused(window.audioMusic.paused)
 	}, [activePanel])
 
 	BoardStore.on(events.LINE_CLEARED, (additionalLines) => {
@@ -252,7 +262,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 												justifyContent: "center",
 												alignItems: "center"
 											}}>
-												<div className={`control-button sound`} onClick={switchSound}>
+												<div className={`control-button sound ${paused ? 'paused' : ''}`} onClick={switchSound}>
 													<div><Sound style={{ display: "block", width: "100%" }} /></div>
 												</div>
 											</Div>

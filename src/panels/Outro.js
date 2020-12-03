@@ -53,7 +53,7 @@ const Outro = ({ id, route, fetchedUser, go, bridge, activePanel }) => {
 							</p>
 							<p>&nbsp;</p>
 							<p>
-								<button className={`btn-red`} onClick={() => go(route)}>Сыграть еще раз</button>&nbsp;&nbsp;
+								<button className={`btn-red`} onClick={() => go(route)}>Сыграть еще раз</button>&nbsp;&nbsp;&nbsp;&nbsp;
 								<button className={`btn-blue`} onClick={() => replay()}>Рассказать друзьям</button>
 							</p>
 						</Div>

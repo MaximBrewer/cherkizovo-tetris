@@ -261,6 +261,7 @@ table.game-board {
   transform: translateX(-50%);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: bottom center;
   bottom: 90%;
   background-image: url(../img/snow-t.png);
 }
@@ -271,6 +272,7 @@ table.game-board {
   height: 2.5rem;
   left: 50%;
   background-size: contain;
+  background-position: top center;
   background-repeat: no-repeat;
   transform: translateX(-50%);
   top: 90%;

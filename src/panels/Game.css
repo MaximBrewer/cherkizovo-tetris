@@ -193,8 +193,8 @@ table.game-board {
 .Game .control-button {
   width: 20%;
   border-radius: 50%;
-  background: #7B0708;
-  border: 2px solid #FFFFFF;
+  background: #7b0708;
+  border: 2px solid #ffffff;
 }
 .Game .control-button > div {
   padding-top: 100%;
@@ -232,8 +232,8 @@ table.game-board {
 .Game .control-button.sound {
   width: 20%;
   border-radius: 50%;
-  background: #2D49DF;
-  border: 2px solid #FFFFFF;
+  background: #2d49df;
+  border: 2px solid #ffffff;
 }
 .Game .control-button.sound > div {
   padding-top: 100%;
@@ -245,4 +245,36 @@ table.game-board {
   top: 26%;
   left: 22%;
   width: 56%;
+}
+.galkin-score {
+  position: relative;
+}
+.galkin-score:before {
+  content: "";
+  position: absolute;
+  width: 6.25rem;
+  height: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+  background-image: url(../img/snow-t.png);
+}
+.galkin-score:after {
+  content: "";
+  position: absolute;
+  width: 6.25rem;
+  height: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10%;
+  background-image: url(../img/snow-b.png);
+}
+.galkin-score > div {
+  position: relative;
+  z-index: 1;
+  background: #aa2223;
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 43px;
+  font-size: 0.675rem;
 }

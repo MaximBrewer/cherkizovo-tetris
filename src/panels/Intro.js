@@ -6,6 +6,7 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import './Intro.css';
 import bg from '../img/intro-bg.jpg';
 import logo from '../img/logo-white.png';
+import galkin from '../img/galkin.png';
 
 const Intro = ({ id, go, route, fetchedUser }) => {
 	return (
@@ -19,7 +20,15 @@ const Intro = ({ id, go, route, fetchedUser }) => {
 							<h3>Миссия: <br />“Накрой праздничный стол с&nbsp;Черкизово!”</h3>
 							<p>Набери больше всех баллов и&nbsp;получи крутые призы!</p>
 							<p>&nbsp;</p>
-							<p><button className={`btn-red`} onClick={() => go(route)}>Играть</button></p>
+							<div style={{ display: "flex" }}>
+								<div>
+									<img src={galkin} alt="Максим Галкин" style={{ width: "20rem" }} />
+								</div>
+								<div>
+									<p>Попробуй набрать больше баллов, <br />чем Максим Галкин</p>
+									<p><button className={`btn-red`} onClick={() => go(route)}>Играть</button></p>
+								</div>
+							</div>
 						</Div>
 					</Div>
 				</Fragment>

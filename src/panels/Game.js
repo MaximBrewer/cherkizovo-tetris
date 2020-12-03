@@ -170,7 +170,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 				<Fragment>
 					<Div className='Game' style={{ textAlign: "center", backgroundImage: 'url(' + bg + ')', color: "#ffffff" }} >
 						<Div style={{ paddingLeft: "1rem" }}>
-							<h4>Миссия: <br /> накрой праздничный стол с Черкизово!</h4>
+							<h4>Миссия: <br />“Накрой праздничный стол с&nbsp;Черкизово!”</h4>
 							<p>Набери больше всех баллов и&nbsp;получи крутые призы!</p>
 						</Div>
 						<Tetris>

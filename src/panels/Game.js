@@ -20,7 +20,7 @@ const axios = require('axios');
 Pusher.logToConsole = true;
 
 const pusher = new Pusher('527099ad7df4062c0694', {
-  cluster: 'eu'
+	cluster: 'eu'
 });
 
 const channel = pusher.subscribe('cherkizovo');
@@ -179,7 +179,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 									<Div style={{ display: "flex", justifyContent: "center" }}>
 										<Div style={{ width: "32%", justifyContent: "center", position: "relative" }}>
 											<div className="galkin-score">
-												<div style={{}}>100500</div>
+												<div style={{}}>Счет Максима <br />100500 баллов</div>
 											</div>
 										</Div>
 										<Div style={{ width: "38%", justifyContent: "center" }}>

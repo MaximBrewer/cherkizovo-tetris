@@ -177,7 +177,7 @@ const Game = ({ id, go, route, fetchedUser, activePanel }) => {
 							{({ HeldPiece, Gameboard, PieceQueue, points, linesCleared }) => {
 								return (
 									<Div style={{ display: "flex", justifyContent: "center" }}>
-										<Div style={{ width: "32%", justifyContent: "center" }}>
+										<Div style={{ width: "32%", justifyContent: "center", position: "relative" }}>
 											<div className="galkin-score">
 												<div style={{}}>100500</div>
 											</div>

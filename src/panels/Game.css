@@ -247,7 +247,10 @@ table.game-board {
   width: 56%;
 }
 .galkin-score {
-  position: relative;
+  position: absolute;
+  padding: 0.5rem 1.2rem;
+  right: 0;
+  top: 4rem;
 }
 .galkin-score:before {
   content: "";
@@ -256,7 +259,9 @@ table.game-board {
   height: 2.5rem;
   left: 50%;
   transform: translateX(-50%);
-  top: 10%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: 90%;
   background-image: url(../img/snow-t.png);
 }
 .galkin-score:after {
@@ -265,8 +270,10 @@ table.game-board {
   width: 6.25rem;
   height: 2.5rem;
   left: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
   transform: translateX(-50%);
-  bottom: 10%;
+  top: 90%;
   background-image: url(../img/snow-b.png);
 }
 .galkin-score > div {

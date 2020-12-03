@@ -20,11 +20,11 @@ const Intro = ({ id, go, route, fetchedUser }) => {
 							<h3>Миссия: <br />“Накрой праздничный стол с&nbsp;Черкизово!”</h3>
 							<p>Набери больше всех баллов и&nbsp;получи крутые призы!</p>
 							<p>&nbsp;</p>
-							<div style={{ display: "flex" }}>
+							<div style={{ display: "flex", alignItems: "center" }}>
 								<div>
-									<img src={galkin} alt="Максим Галкин" style={{ width: "20rem" }} />
+									<img src={galkin} alt="Максим Галкин" style={{ width: "12rem" }} />
 								</div>
-								<div>
+								<div style={{ textAlign: "left", marginLeft: "1.4rem" }}>
 									<p>Попробуй набрать больше баллов, <br />чем Максим Галкин</p>
 									<p><button className={`btn-red`} onClick={() => go(route)}>Играть</button></p>
 								</div>

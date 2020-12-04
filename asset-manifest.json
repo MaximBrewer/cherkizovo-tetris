@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/cherkizovo-tetris/static/css/main.cb6bbe7c.chunk.css",
-    "main.js": "/cherkizovo-tetris/static/js/main.74950253.chunk.js",
-    "main.js.map": "/cherkizovo-tetris/static/js/main.74950253.chunk.js.map",
+    "main.js": "/cherkizovo-tetris/static/js/main.b3474b06.chunk.js",
+    "main.js.map": "/cherkizovo-tetris/static/js/main.b3474b06.chunk.js.map",
     "runtime-main.js": "/cherkizovo-tetris/static/js/runtime-main.6e8a90eb.js",
     "runtime-main.js.map": "/cherkizovo-tetris/static/js/runtime-main.6e8a90eb.js.map",
     "static/css/2.cdee455b.chunk.css": "/cherkizovo-tetris/static/css/2.cdee455b.chunk.css",
     "static/js/2.fcbe800e.chunk.js": "/cherkizovo-tetris/static/js/2.fcbe800e.chunk.js",
     "static/js/2.fcbe800e.chunk.js.map": "/cherkizovo-tetris/static/js/2.fcbe800e.chunk.js.map",
     "index.html": "/cherkizovo-tetris/index.html",
-    "precache-manifest.13744a8df3b0fa0111b2725d462f6586.js": "/cherkizovo-tetris/precache-manifest.13744a8df3b0fa0111b2725d462f6586.js",
+    "precache-manifest.ad4acdb294eba9467f62fe6fec5f7273.js": "/cherkizovo-tetris/precache-manifest.ad4acdb294eba9467f62fe6fec5f7273.js",
     "service-worker.js": "/cherkizovo-tetris/service-worker.js",
     "static/css/2.cdee455b.chunk.css.map": "/cherkizovo-tetris/static/css/2.cdee455b.chunk.css.map",
     "static/css/main.cb6bbe7c.chunk.css.map": "/cherkizovo-tetris/static/css/main.cb6bbe7c.chunk.css.map",
@@ -19,7 +19,7 @@
     "static/media/game-bg.jpg": "/cherkizovo-tetris/static/media/game-bg.1a5dfd38.jpg",
     "static/media/intro-bg.jpg": "/cherkizovo-tetris/static/media/intro-bg.e4f61210.jpg",
     "static/media/logo-white.png": "/cherkizovo-tetris/static/media/logo-white.19fa04fb.png",
-    "static/media/music.mp3": "/cherkizovo-tetris/static/media/music.18ca30f9.mp3",
+    "static/media/music.mp3": "/cherkizovo-tetris/static/media/music.36dc55fb.mp3",
     "static/media/Game.css": "/cherkizovo-tetris/static/media/snow-t.2fd63dae.png",
     "static/media/woop.mp3": "/cherkizovo-tetris/static/media/woop.e3c35f09.mp3"
   },
@@ -28,6 +28,6 @@
     "static/css/2.cdee455b.chunk.css",
     "static/js/2.fcbe800e.chunk.js",
     "static/css/main.cb6bbe7c.chunk.css",
-    "static/js/main.74950253.chunk.js"
+    "static/js/main.b3474b06.chunk.js"
   ]
 }
